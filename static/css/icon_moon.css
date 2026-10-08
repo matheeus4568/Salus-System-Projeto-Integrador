@@ -1,0 +1,290 @@
+@font-face {
+  font-family: 'cones-SALUS';
+  src:  url('../fonts/cones-SALUS.eot?gspogy');
+  src:  url('../fonts/cones-SALUS.eot?gspogy#iefix') format('embedded-opentype'),
+    url('../fonts/cones-SALUS.ttf?gspogy') format('truetype'),
+    url('../fonts/cones-SALUS.woff?gspogy') format('woff'),
+    url('../fonts/cones-SALUS.svg?gspogy#cones-SALUS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cones-SALUS' !important;
+  speak-as: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mais:before {
+  content: "\e900";
+}
+.icon-duas-setas-direita:before {
+  content: "\e901";
+  color: #767676;
+}
+.icon-duas-setas-esquerda:before {
+  content: "\e902";
+  color: #767676;
+}
+.icon-tres-pontos:before {
+  content: "\e903";
+  color: #767676;
+}
+.icon-sessenta-mais:before {
+  content: "\e904";
+  color: #767676;
+}
+.icon-mao-alergica:before {
+  content: "\e905";
+  color: #767676;
+}
+.icon-atencao:before {
+  content: "\e906";
+  color: #767676;
+}
+.icon-baixar:before {
+  content: "\e907";
+  color: #767676;
+}
+.icon-cadeado-chave:before {
+  content: "\e908";
+  color: #767676;
+}
+.icon-calendario:before {
+  content: "\e909";
+  color: #767676;
+}
+.icon-casa:before {
+  content: "\e90a";
+  color: #767676;
+}
+.icon-celular:before {
+  content: "\e90b";
+  color: #767676;
+}
+.icon-checkbox-vazio:before {
+  content: "\e90c";
+  color: #767676;
+}
+.icon-checkbox-marcado:before {
+  content: "\e90d";
+  color: #767676;
+}
+.icon-perigo:before {
+  content: "\e90e";
+  color: #767676;
+}
+.icon-cadeirante:before {
+  content: "\e90f";
+  color: #767676;
+}
+.icon-recente-x:before {
+  content: "\e910";
+  color: #767676;
+}
+.icon-cartao:before {
+  content: "\e911";
+  color: #767676;
+}
+.icon-email:before {
+  content: "\e912";
+  color: #767676;
+}
+.icon-check:before {
+  content: "\e913";
+  color: #767676;
+}
+.icon-folha:before {
+  content: "\e914";
+  color: #767676;
+}
+.icon-circulo-triangulo-quadrado:before {
+  content: "\e915";
+  color: #767676;
+}
+.icon-gravidez:before {
+  content: "\e916";
+  color: #767676;
+}
+.icon-impressora:before {
+  content: "\e917";
+  color: #767676;
+}
+.icon-informacao:before {
+  content: "\e918";
+  color: #767676;
+}
+.icon-lapis:before {
+  content: "\e919";
+  color: #767676;
+}
+.icon-linha-horizontal:before {
+  content: "\e91a";
+  color: #767676;
+}
+.icon-lixo:before {
+  content: "\e91b";
+  color: #767676;
+}
+.icon-lupa:before {
+  content: "\e91c";
+  color: #767676;
+}
+.icon-estrela-quatro-pontas:before {
+  content: "\e91d";
+  color: #767676;
+}
+.icon-medico:before {
+  content: "\e91e";
+  color: #767676;
+}
+.icon-olho-aberto:before {
+  content: "\e91f";
+  color: #767676;
+}
+.icon-olho-fechado:before {
+  content: "\e920";
+  color: #767676;
+}
+.icon-fita:before {
+  content: "\e921";
+  color: #767676;
+}
+.icon-pessoa:before {
+  content: "\e922";
+  color: #767676;
+}
+.icon-pessoa-mais:before {
+  content: "\e923";
+  color: #767676;
+}
+.icon-pessoa-x:before {
+  content: "\e924";
+  color: #767676;
+}
+.icon-pessoas-salus:before {
+  content: "\e925";
+  color: #767676;
+}
+.icon-pessoas-salus-marcado:before {
+  content: "\e926";
+  color: #767676;
+}
+.icon-painel:before {
+  content: "\e927";
+  color: #767676;
+}
+.icon-Painel-marcado:before {
+  content: "\e928";
+  color: #767676;
+}
+.icon-circulo:before {
+  content: "\e929";
+  color: #767676;
+}
+.icon-perfil:before {
+  content: "\e92a";
+  color: #767676;
+}
+.icon-perfil-marcado:before {
+  content: "\e92b";
+  color: #767676;
+}
+.icon-prancheta:before {
+  content: "\e92c";
+  color: #767676;
+}
+.icon-triangulo-cima-e-baixo:before {
+  content: "\e92d";
+  color: #767676;
+}
+.icon-folder:before {
+  content: "\e92e";
+  color: #767676;
+}
+.icon-folder-mais:before {
+  content: "\e92f";
+  color: #767676;
+}
+.icon-folder-x:before {
+  content: "\e930";
+  color: #767676;
+}
+.icon-folder-check:before {
+  content: "\e931";
+  color: #767676;
+}
+.icon-folder-estrela:before {
+  content: "\e932";
+  color: #767676;
+}
+.icon-folder-circulo:before {
+  content: "\e933";
+  color: #767676;
+}
+.icon-folder-seta-baixo:before {
+  content: "\e934";
+  color: #767676;
+}
+.icon-folder-seta-cima:before {
+  content: "\e935";
+  color: #767676;
+}
+.icon-folders-salus:before {
+  content: "\e936";
+  color: #767676;
+}
+.icon-folders-salus-marcado:before {
+  content: "\e937";
+  color: #767676;
+}
+.icon-secretaria-salus:before {
+  content: "\e938";
+  color: #767676;
+}
+.icon-secretaria-salus-marcado:before {
+  content: "\e939";
+  color: #767676;
+}
+.icon-chevron-baixo:before {
+  content: "\e93a";
+  color: #767676;
+}
+.icon-chevron-cima:before {
+  content: "\e93b";
+  color: #767676;
+}
+.icon-chevron-direita:before {
+  content: "\e93c";
+  color: #767676;
+}
+.icon-chevron-esquerda:before {
+  content: "\e93d";
+  color: #767676;
+}
+.icon-onda:before {
+  content: "\e93e";
+  color: #767676;
+}
+.icon-quadrado-marcado:before {
+  content: "\e93f";
+  color: #767676;
+}
+.icon-pessoa-salus:before {
+  content: "\e940";
+  color: #767676;
+}
+.icon-x:before {
+  content: "\e941";
+  color: #767676;
+}
