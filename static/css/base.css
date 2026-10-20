@@ -244,7 +244,6 @@ hr {
     background-color: var(--light-gray);
     border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 
-    width: 100%;
     height: fit-content;
     min-height: 50px;
 
@@ -259,7 +258,6 @@ hr {
     background-color: var(--white);
     border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
 
-    width: 100%;
     height: fit-content;
     min-height: 50px;
 
@@ -267,19 +265,16 @@ hr {
     flex-direction: column;
 
     padding: 0 0 0 var(--spacing-md);
-    gap: var(--spacing-sm);
 
     border-style: solid;
     border-width: 0 4px 4px 4px;
     border-color: var(--light-gray);
-    
 }
 
 .container-border{
     background-color: var(--white);
     border-radius: var(--border-radius-md) var(--border-radius-md);
 
-    width: 100%;
     height: fit-content;
     min-height: 50px;
 
@@ -291,6 +286,5 @@ hr {
 
     border-style: solid;
     border-width: 4px;
-    border-color: var(--light-gray);
-    
+    border-color: var(--light-gray);   
 }
