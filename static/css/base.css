@@ -1,5 +1,296 @@
+/*=============================================================
+BASE.CSS
+Reset, variáveis globais, tipografia e estilos base
+=============================================================*/
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+1. IMPORT DAS FONTES
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+2. RESET
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/* Box sizing previsível em todos os elementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove margens padrão */
 * {
-    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Melhora quebra de linha em textos */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Mídia não estoura o container */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inputs e buttons herdam a fonte do pai */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Evita overflow de texto em elementos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Remove bullets e padding de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Links sem decoração por padrão */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Botões sem aparência nativa */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+3. VARIÁVEIS GLOBAIS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+:root {
+    /* Cores */
+
+    --white: #FFFFFF;
+    --light-blue-gray: #E1E6EE;
+    --light-gray: #E9E9E9;
+    --mid-light-gray: #c4c4c4;
+    --mid-gray: #767676;
+    --black: #484848;
+
+    --red: #BD1717;
+    --green: #43A903;
+
+    --light-blue: #C2E7FF;
+    --blue: #269AEC;
+    --dark-blue: #00345E;
+    --darker-blue: #002738;
+
+    --pendente-fg: #5B5000;
+    --pendente-bg: #F9F699;
+    --marcada-fg: #007C66;
+    --marcada-bg: #D1F8F9;
+    --encerrada-fg: #207A0A;
+    --encerrada-bg: #DCF0D8;
+    --cancelada-fg: #FFFFFF;
+    --cancelada-bg: #767676;
+
+    --eletiva-fg: #106E83;
+    --eletiva-bg: #CAE8EF;
+    --emergência-fg: #961919;
+    --emergência-bg: #F4CACA;
+
+    /* Espaçamentos */
+
+    --spacing-xs: 4px;  /*4 no figma*/
+    --spacing-sm: 8px;  /*8 no figma*/
+    --spacing-md: 16px; /*16 no figma*/
+    --spacing-lg: 24px; /*24 no figma*/
+    --spacing-xl: 32px;   /*32 no figma*/
+    --spacing-xxl: 64px;  /*64 no figma*/
+
+    /* Bordas */
+
+    --border-radius-sm: 8px; /*8 no figma*/
+    --border-radius-md: 16px; /*16 no figma*/
+    --border-radius-lg: 24px; /*24 no figma*/
+    --border-radius-xl: 32px; /*32 no figma*/
+
+    /* Tipografia */
+
+    --system-font: "Inter", sans-serif;
+    --system-font-alt: "Montserrat", sans-serif;
+
+    --fs-xs: 14px; /*14 no figma*/
+    --fs-sm: 16px; /*16 no figma*/
+    --fs-md: 18px; /*18 no figma*/
+    --fs-lg: 24px; /*24 no figma*/
+    --fs-xl: 36px; /*36 no figma*/
+
+    --fw-regular: 400; 
+    --fw-medium:  500; /*medium no figma*/
+    --fw-semibold:600; /*semibold no figma*/
+    --fw-bold:    700; /*bold no figma*/
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+4. ESTILOS BASE
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+* {
+    font-family: var(--system-font);
+}
+
+body{
+    background-color: var(--light-blue-gray);
+    color: var(--black);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+}
+
+/*Corpo Título no Figma*/
+h1, h3 {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+}
+
+/*Container Título no Figma*/
+h2 {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+
+    margin: 14.5px 0 14.5px 12px;
+}
+
+/*LETREIRO Título no Figma*/
+h4 {
+    font-family: var(--system-font-alt);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--light-gray);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+4. UTILITÁRIOS (classes de uso geral)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+/* Tipografia */
+
+/*Small no Figma*/
+.txt-sm{
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+}
+
+/*Corpo no Figma*/
+.txt-md{ 
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+}
+
+/*Link (sem o tamanho) no Figma*/
+.txt-link{ 
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.txt-link:hover{
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* Containers */
+
+.container{
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+
+    box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, 0.10);
+}
+
+.container-filter-top{
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.container-filter-bottom{
+    background-color: var(--white);
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 0 0 var(--spacing-md);
+    gap: var(--spacing-sm);
+
+    border-style: solid;
+    border-width: 0 4px 4px 4px;
+    border-color: var(--light-gray);
+    
+}
+
+.container-border{
+    background-color: var(--white);
+    border-radius: var(--border-radius-md) var(--border-radius-md);
+
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+
+    border-style: solid;
+    border-width: 4px;
+    border-color: var(--light-gray);
+    
 }
