@@ -29,7 +29,7 @@ Reset, variáveis globais, tipografia e estilos base
 
 /* Melhora quebra de linha em textos */
 body {
-    line-height: 1.5;
+    /*line-height: 1.5; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -139,11 +139,11 @@ button {
     --system-font: "Inter", sans-serif;
     --system-font-alt: "Montserrat", sans-serif;
 
-    --fs-xs: 14px; /*14 no figma*/
-    --fs-sm: 16px; /*16 no figma*/
-    --fs-md: 18px; /*18 no figma*/
-    --fs-lg: 24px; /*24 no figma*/
-    --fs-xl: 36px; /*36 no figma*/
+    --fs-xs: 13px; /*14 no figma*/
+    --fs-sm: 15px; /*16 no figma*/
+    --fs-md: 17px; /*18 no figma*/
+    --fs-lg: 23px; /*24 no figma*/
+    --fs-xl: 35px; /*36 no figma*/
 
     --fw-regular: 400; 
     --fw-medium:  500; /*medium no figma*/
