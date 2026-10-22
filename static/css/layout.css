@@ -22,6 +22,7 @@ main {
     gap: var(--spacing-lg);
 }
 
+
 body {
     display: grid;
     grid-template-areas:

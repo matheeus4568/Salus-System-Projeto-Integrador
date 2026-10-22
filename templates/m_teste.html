@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/components/sidebar.css' %}">
 {% endblock %}
 
 {% block aside %}
-    <nav>
         {% include "components/sidebar.html" with perfil=True %}
-    </nav>
 {% endblock %}
 
 {% block main %}
