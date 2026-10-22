@@ -197,6 +197,35 @@ hr {
 4. UTILITÁRIOS (classes de uso geral)
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
+/* Display */
+.flex {
+    display: flex;
+}
+
+.direction-row {
+    flex-direction: row;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justfy-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justfy-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-space-between {
+    align-items: space-between;
+}
+
 /* Tipografia */
 
 /*Small no Figma*/
