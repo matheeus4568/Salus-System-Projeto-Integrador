@@ -2,3 +2,32 @@
 LAYOUT.CSS
 Layout base das páginas
 =============================================================*/
+
+aside {
+    grid-area: aside;
+    background-color: var(--white);
+}
+
+header {
+    grid-area: header;
+    background-color: var(--white);
+}
+
+main {
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-lg);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "aside header"
+        "aside main"
+        "aside main";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr 1fr;
+}

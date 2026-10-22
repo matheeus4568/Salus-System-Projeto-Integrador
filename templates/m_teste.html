@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/components/sidebar.css' %}">
+{% endblock %}
+
+{% block aside %}
+    <nav>
+        {% include "components/sidebar.html" with perfil=True %}
+    </nav>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="container-border">
+            <h3>Total de requisições</h3>
+            <h4>11.345</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
