@@ -26,148 +26,148 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mais:before {
+.icon-plus:before {
   content: "\e900";
 }
-.icon-duas-setas-direita:before {
+.icon-two-chevron-rigth:before {
   content: "\e901";
 }
-.icon-duas-setas-esquerda:before {
+.icon-two-chevron-left:before {
   content: "\e902";
 }
-.icon-tres-pontos:before {
+.icon-tree-dots:before {
   content: "\e903";
 }
-.icon-sessenta-mais:before {
+.icon-sixty-plus:before {
   content: "\e904";
 }
-.icon-mao-alergica:before {
+.icon-alergic-hand:before {
   content: "\e905";
 }
-.icon-atencao:before {
+.icon-attention:before {
   content: "\e906";
 }
-.icon-baixar:before {
+.icon-download:before {
   content: "\e907";
 }
-.icon-cadeado-chave:before {
+.icon-padlock-key:before {
   content: "\e908";
 }
-.icon-calendario:before {
+.icon-calendar:before {
   content: "\e909";
 }
-.icon-casa:before {
+.icon-house:before {
   content: "\e90a";
 }
-.icon-celular:before {
+.icon-cellphone:before {
   content: "\e90b";
 }
-.icon-checkbox-vazio:before {
+.icon-checkbox:before {
   content: "\e90c";
 }
-.icon-checkbox-marcado:before {
+.icon-checkbox-solid:before {
   content: "\e90d";
 }
-.icon-perigo:before {
+.icon-danger:before {
   content: "\e90e";
 }
-.icon-cadeirante:before {
+.icon-wheelchair-user:before {
   content: "\e90f";
 }
-.icon-recente-x:before {
+.icon-recent-x:before {
   content: "\e910";
 }
-.icon-cartao:before {
+.icon-card:before {
   content: "\e911";
 }
-.icon-email:before {
+.icon-mail:before {
   content: "\e912";
 }
 .icon-check:before {
   content: "\e913";
 }
-.icon-folha:before {
+.icon-paper:before {
   content: "\e914";
 }
-.icon-circulo-triangulo-quadrado:before {
+.icon-circle-triangle-square:before {
   content: "\e915";
 }
-.icon-gravidez:before {
+.icon-pregnancy:before {
   content: "\e916";
 }
-.icon-impressora:before {
+.icon-printer:before {
   content: "\e917";
 }
-.icon-informacao:before {
+.icon-information:before {
   content: "\e918";
 }
-.icon-lapis:before {
+.icon-pencil:before {
   content: "\e919";
 }
-.icon-linha-horizontal:before {
+.icon-horizontal-line:before {
   content: "\e91a";
 }
-.icon-lixo:before {
+.icon-trash:before {
   content: "\e91b";
 }
-.icon-lupa:before {
+.icon-lupe:before {
   content: "\e91c";
 }
-.icon-estrela-quatro-pontas:before {
+.icon-sparkle:before {
   content: "\e91d";
 }
-.icon-medico:before {
+.icon-medic:before {
   content: "\e91e";
 }
-.icon-olho-aberto:before {
+.icon-open-eye:before {
   content: "\e91f";
 }
-.icon-olho-fechado:before {
+.icon-closed-eye:before {
   content: "\e920";
 }
-.icon-fita:before {
+.icon-ribbon:before {
   content: "\e921";
 }
-.icon-pessoa:before {
+.icon-person:before {
   content: "\e922";
 }
-.icon-pessoa-mais:before {
+.icon-person-plus:before {
   content: "\e923";
 }
-.icon-pessoa-x:before {
+.icon-person-x:before {
   content: "\e924";
 }
-.icon-pessoas-salus:before {
+.icon-people:before {
   content: "\e925";
 }
-.icon-pessoas-salus-marcado:before {
+.icon-people-solid:before {
   content: "\e926";
 }
 .icon-monitor:before {
   content: "\e927";
 }
-.icon-monitor-marcado:before {
+.icon-monitor-solid:before {
   content: "\e928";
 }
-.icon-circulo:before {
+.icon-circle:before {
   content: "\e929";
 }
-.icon-perfil:before {
+.icon-profile:before {
   content: "\e92a";
 }
-.icon-perfil-marcado:before {
+.icon-profile-solid:before {
   content: "\e92b";
 }
-.icon-prancheta:before {
+.icon-clipboard:before {
   content: "\e92c";
 }
-.icon-triangulo-cima-e-baixo:before {
+.icon-triangle-up-triangle-down:before {
   content: "\e92d";
 }
 .icon-folder:before {
   content: "\e92e";
 }
-.icon-folder-mais:before {
+.icon-folder-plus:before {
   content: "\e92f";
 }
 .icon-folder-x:before {
@@ -176,49 +176,49 @@
 .icon-folder-check:before {
   content: "\e931";
 }
-.icon-folder-estrela:before {
+.icon-folder-sparkle:before {
   content: "\e932";
 }
-.icon-folder-circulo:before {
+.icon-folder-circle:before {
   content: "\e933";
 }
-.icon-folder-seta-baixo:before {
+.icon-folder-arrow-down:before {
   content: "\e934";
 }
-.icon-folder-seta-cima:before {
+.icon-folder-arrow-up:before {
   content: "\e935";
 }
-.icon-folders-salus:before {
+.icon-folders:before {
   content: "\e936";
 }
-.icon-folders-salus-marcado:before {
+.icon-folders-solid:before {
   content: "\e937";
 }
-.icon-secretaria-salus:before {
+.icon-secretary:before {
   content: "\e938";
 }
-.icon-secretaria-salus-marcado:before {
+.icon-secretary-solid:before {
   content: "\e939";
 }
-.icon-chevron-baixo:before {
+.icon-chevron-down:before {
   content: "\e93a";
 }
-.icon-chevron-cima:before {
+.icon-chevron-up:before {
   content: "\e93b";
 }
-.icon-chevron-direita:before {
+.icon-chevron-right:before {
   content: "\e93c";
 }
-.icon-chevron-esquerda:before {
+.icon-chevron-left:before {
   content: "\e93d";
 }
-.icon-onda:before {
+.icon-wave:before {
   content: "\e93e";
 }
-.icon-quadrado-marcado:before {
+.icon-square-solid:before {
   content: "\e93f";
 }
-.icon-pessoa-salus:before {
+.icon-person-sparkle:before {
   content: "\e940";
 }
 .icon-x:before {

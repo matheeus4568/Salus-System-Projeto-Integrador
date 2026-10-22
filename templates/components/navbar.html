@@ -1,0 +1,63 @@
+<nav class="navbar">
+    <ul class="navbar-menu">
+        <li class="navbar-item">
+            {% if not painel %}
+                <a href="#" class="navbar-link">
+                    {% include 'components/icon.html' with icon='icon-monitor' %}
+                    <span class="navbar-label">Painel</span>
+                </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon='icon-monitor-solid' color='var(--darker-blue)' %}></span>
+                <span class="navbar-label" style="color: var(--dark-blue);">Painel</span>
+            {% endif %}
+        </li>
+
+        <li class="navbar-item">
+            {% if not requisicoes %}
+            <a href="#" class="navbar-link">
+                {% include 'components/icon.html'  with  icon='icon-folders'%}
+                <span class="navbar-label">Requisições</span>
+            </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon='icon-folders-solid' color='var(--darker-blue)' %}
+                <span class="navbar-label" style="color: var(--dark-blue);">Requisições</span>
+            {% endif %}
+        </li>
+
+        <li class="navbar-item">
+            {% if not pacientes %}
+            <a href="#" class="navbar-link">
+                {% include 'components/icon.html'  with  icon='icon-people'%}
+                <span class="navbar-label">Pacientes</span>
+            </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon='icon-people-solid' color='var(--darker-blue)' %}
+                <span class="navbar-label" style="color: var(--dark-blue);">Pacientes</span>
+            {% endif %}
+        </li>
+
+        <li class="navbar-item">
+            {% if not secretaria %}
+            <a href="#" class="navbar-link">
+                {% include 'components/icon.html'  with  icon='icon-secretary'%}
+                <span class="navbar-label">Secretaria</span>
+            </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon='icon-secretary-solid' color='var(--darker-blue)' %}
+                <span class="navbar-label" style="color: var(--dark-blue);">Secretaria</span>
+            {% endif %}
+        </li>
+        
+        <li class="navbar-item">
+            {% if not perfil %}
+            <a href="#" class="navbar-link">
+                {% include 'components/icon.html'  with  icon='icon-profile'%}
+                <span class="navbar-label">Perfil</span>
+            </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon='icon-profile-solid' color='var(--darker-blue)' %}
+                <span class="navbar-label" style="color: var(--dark-blue);">Perfil</span>
+            {% endif %}
+        </li>
+    </ul>
+</nav>

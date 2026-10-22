@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block aside %}
-        {% include "components/sidebar.html" with perfil=True %}
+    {% include "components/navbar.html" with perfil=True %}
+{% endblock %}
+
+{% block header %}
+    {% include "components/header.html" with perfil=True %}
 {% endblock %}
 
 {% block main %}

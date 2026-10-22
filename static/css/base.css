@@ -222,6 +222,10 @@ hr {
     text-decoration: underline;
 }
 
+.mid-gray{
+    color: var(--mid-gray);
+}
+
 /* Containers */
 
 .container{
