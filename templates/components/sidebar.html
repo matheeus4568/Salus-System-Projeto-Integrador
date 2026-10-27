@@ -1,59 +1,19 @@
 <nav class="sidebar">
     <ul class="sidebar-menu">
+        {% for link in sidebar_links %}
         <li class="sidebar-item">
-            {% if not painel %}
-                <a href="#" class="sidebar-link">
-                    {% include 'components/icone.html' with icon='icon-monitor' %}
-                    <span class="sidebar-label">Painel</span>
+            
+            {% if request.resolver_match.view_name != link.url_name %}
+                <a href="{% url link.url_name %}" class="sidebar-link">
+                    {% include 'components/icone.html' with icon=link.icon  %}
+                    <span class="sidebar-label">{{ link.label }}</span>
                 </a>
             {% else %}
-                {% include 'components/icone.html'  with  icon='icon-monitor-marcado' color='var(--darker-blue)' %}></span>
-                <span class="sidebar-label" style="color: var(--dark-blue);">Painel</span>
+                {% include 'components/icone.html'  with  icon=link.active_icon color='var(--darker-blue)' %}
+                <span class="sidebar-label" style="color: var(--dark-blue);">{{ link.label }}</span>
             {% endif %}
         </li>
-        <li class="sidebar-item">
-            {% if not requisicoes %}
-            <a href="#" class="sidebar-link">
-                {% include 'components/icone.html'  with  icon='icon-folders-salus'%}
-                <span class="sidebar-label">Requisições</span>
-            </a>
-            {% else %}
-                {% include 'components/icone.html'  with  icon='icon-folders-salus-marcado' color='var(--darker-blue)' %}
-                <span class="sidebar-label" style="color: var(--dark-blue);">Requisições</span>
-            {% endif %}
-        </li>
-        <li class="sidebar-item">
-            {% if not pacientes %}
-            <a href="#" class="sidebar-link">
-                {% include 'components/icone.html'  with  icon='icon-pessoas-salus'%}
-                <span class="sidebar-label">Pacientes</span>
-            </a>
-            {% else %}
-                {% include 'components/icone.html'  with  icon='icon-pessoas-salus-marcado' color='var(--darker-blue)' %}
-                <span class="sidebar-label" style="color: var(--dark-blue);">Pacientes</span>
-            {% endif %}
-        </li>
-        <li class="sidebar-item">
-            {% if not secretaria %}
-            <a href="#" class="sidebar-link">
-                {% include 'components/icone.html'  with  icon='icon-secretaria-salus'%}
-                <span class="sidebar-label">Secretaria</span>
-            </a>
-            {% else %}
-                {% include 'components/icone.html'  with  icon='icon-secretaria-salus-marcado' color='var(--darker-blue)' %}
-                <span class="sidebar-label" style="color: var(--dark-blue);">Secretaria</span>
-            {% endif %}
-        </li>
-        <li class="sidebar-item">
-            {% if not perfil %}
-            <a href="#" class="sidebar-link">
-                {% include 'components/icone.html'  with  icon='icon-perfil'%}
-                <span class="sidebar-label">Perfil</span>
-            </a>
-            {% else %}
-                {% include 'components/icone.html'  with  icon='icon-perfil-marcado' color='var(--darker-blue)' %}
-                <span class="sidebar-label" style="color: var(--dark-blue);">Perfil</span>
-            {% endif %}
-        </li>
+        {% endfor %}
+        
     </ul>
 </nav>
