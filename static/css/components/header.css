@@ -1,3 +1,16 @@
 .header {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.icon-title {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+}
+
+.hedaer > img {
+    
 }

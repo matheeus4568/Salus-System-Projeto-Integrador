@@ -1,10 +1,14 @@
-<div class="header flex direction-row justfy-content-space-between">
-    <h1>Requisições</h1>
+{% load static %}
+<div class="header">
+    <div class="icon-title">
+        <img src="{% static 'images/icons/secretary-img.svg' %}" alt="Secretaria">
+        <h1>Requisições</h1>
+    </div>
 
     <div>
-        <div class="flex direction-row">
+        <div class="header-menu">
             {% include 'components/icon.html' with icon='icon-secretary' %}
-            <div class="flex direction-column">
+            <div class="">
             <p class="txt-sm mid-gray">Secretaria de</p>
             <p class="txt-sm">Pau dos Ferros</p>
             </div>
