@@ -1,19 +1,26 @@
 {% load static %}
 <div class="header">
     <div class="icon-title">
-        <img src="{% static 'images/icons/secretary-img.svg' %}" alt="Secretaria">
-        <h1>Requisições</h1>
+        <img src="{% static 'images/icons/' %}{{ icone_titulo|default:'folders-img.svg' }}" alt="" height="36px">
+        <h1>{{ title_page|default:"Untitled" }}</h1>
     </div>
 
-    <div>
-        <div class="header-menu">
+    <di class="header-menu">
+        <div class="header-menu-item">
             {% include 'components/icon.html' with icon='icon-secretary' %}
             <div class="">
             <p class="txt-sm mid-gray">Secretaria de</p>
-            <p class="txt-sm">Pau dos Ferros</p>
+            <p class="txt-sm">{{ name_secratary|default:"Não informada" }}</p>
             </div>
         </div>
 
+        <div class="header-menu-item">
+            <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="" height="36px">
+            <div class="">
+            <p class="txt-sm mid-gray">{{ funcao|default:"Funcionário" }}</p>
+            <p class="txt-sm">{{ name_employee|default:"Não informado" }}</p>
+            </div>
+        </div>
     </div>
     
 </div>
