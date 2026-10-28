@@ -1,7 +1,7 @@
 # core/context_processors.py
-def sidebar_links(request):
+def navbar_links(request):
     return {
-        "sidebar_links": [
+        "navbar_links": [
             {"label": "Dashboard", "url_name": "teste", "icon": "icon-monitor", "active_icon": "icon-monitor-solid"},
             {"label": "Requisições",  "url_name": "teste", "icon": "icon-folders", "active_icon": "icon-folders-solid"},
             {"label": "Pacientes",   "url_name": "teste", "icon": "icon-people", "active_icon": "icon-people-solid"},

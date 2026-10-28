@@ -1,6 +1,6 @@
 <nav class="navbar">
     <ul class="navbar-menu">
-        {% for link in sidebar_links %}
+        {% for link in navbar_links %}
         <li class="navbar-item">
             
             {% if request.resolver_match.view_name != link.url_name %}
