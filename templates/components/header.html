@@ -10,7 +10,7 @@
 
 <div class="header">
 
-    <div class="icon-title">
+    <div class="header-icon-title">
         <img src="{% static 'images/icons/' %}{{ title_icon|default:'folders-img.svg' }}" alt="Ícone de {{ page_title }}">
         <h1>{{ page_title|default:"Untitled" }}</h1>
     </div>
@@ -36,5 +36,5 @@
         {% include 'components/clickable_icon.html' with url='#' icon='icon-tree-dots' %}
 
     </div>
-    <span class="round-corner"></span>
+    <span class="header-round-corner"></span>
 </div>

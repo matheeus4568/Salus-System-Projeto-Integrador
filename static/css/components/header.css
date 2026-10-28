@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.icon-title {
+.header-icon-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,7 +43,7 @@
     border-radius: 50%;
 }
 
-.round-corner {
+.header-round-corner {
     position: absolute;
     background-color: var(--white);
     width: 22px;
