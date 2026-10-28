@@ -17,6 +17,10 @@
     gap: var(--spacing-md);
 }
 
+.icon-title img {
+    height: 36px;
+}
+
 .header-menu {
     display: flex;
     flex-direction: row;

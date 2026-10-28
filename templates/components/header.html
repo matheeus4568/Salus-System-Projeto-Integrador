@@ -1,7 +1,7 @@
 {% load static %}
 <!-- VARIAVEIS DO HEADER -->
 <!-- title_icon: nome do arquivo svg do icone do titulo da pagina -->
-<!-- title_page: titulo da pagina -->
+<!-- page_title: titulo da pagina -->
 <!-- name_secratary: nome da secretaria -->
 <!-- role: função do funcionário -->
 <!-- name_employee: nome do funcionário -->
@@ -9,8 +9,8 @@
 <div class="header">
 
     <div class="icon-title">
-        <img src="{% static 'images/icons/' %}{{ title_icon|default:'folders-img.svg' }}" alt="" height="36px">
-        <h1>{{ title_page|default:"Untitled" }}</h1>
+        <img src="{% static 'images/icons/' %}{{ title_icon|default:'folders-img.svg' }}" alt="Ícone de {{ page_title }}">
+        <h1>{{ page_title|default:"Untitled" }}</h1>
     </div>
 
     <div class="header-menu">
@@ -24,7 +24,7 @@
         </a>
 
         <a class="header-menu-item" href="#">
-            <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="" height="36px">
+            <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="Foto do perfil">
             <div class="">
             <p class="txt-sm mid-gray">{{ role|default:"Funcionário" }}</p>
             <p class="txt-sm">{{ name_employee|default:"Untitled" }}</p>
