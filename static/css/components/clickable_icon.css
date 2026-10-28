@@ -1,0 +1,19 @@
+.clickable-icon, .clickable-icon > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    width: 40px;
+    height: 40px;
+}
+
+.clickable-icon:hover {
+    background-color: var(--light-gray);
+    border-radius: 50%;
+}
+
+.clickable-icon:active {
+    background-color: var(--mid-light-gray);
+    border-radius: 50%;
+}

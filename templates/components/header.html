@@ -1,26 +1,38 @@
 {% load static %}
+<!-- VARIAVEIS DO HEADER -->
+<!-- title_icon: nome do arquivo svg do icone do titulo da pagina -->
+<!-- title_page: titulo da pagina -->
+<!-- name_secratary: nome da secretaria -->
+<!-- role: função do funcionário -->
+<!-- name_employee: nome do funcionário -->
+
 <div class="header">
+
     <div class="icon-title">
-        <img src="{% static 'images/icons/' %}{{ icone_titulo|default:'folders-img.svg' }}" alt="" height="36px">
+        <img src="{% static 'images/icons/' %}{{ title_icon|default:'folders-img.svg' }}" alt="" height="36px">
         <h1>{{ title_page|default:"Untitled" }}</h1>
     </div>
 
-    <di class="header-menu">
-        <div class="header-menu-item">
+    <div class="header-menu">
+
+        <a class="header-menu-item" href="#">
             {% include 'components/icon.html' with icon='icon-secretary' %}
             <div class="">
             <p class="txt-sm mid-gray">Secretaria de</p>
-            <p class="txt-sm">{{ name_secratary|default:"Não informada" }}</p>
+            <p class="txt-sm">{{ name_secratary|default:"Untitled" }}</p>
             </div>
-        </div>
+        </a>
 
-        <div class="header-menu-item">
+        <a class="header-menu-item" href="#">
             <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="" height="36px">
             <div class="">
-            <p class="txt-sm mid-gray">{{ funcao|default:"Funcionário" }}</p>
-            <p class="txt-sm">{{ name_employee|default:"Não informado" }}</p>
+            <p class="txt-sm mid-gray">{{ role|default:"Funcionário" }}</p>
+            <p class="txt-sm">{{ name_employee|default:"Untitled" }}</p>
             </div>
-        </div>
+        </a>
+
+        {% include 'components/clickable_icon.html' with url='#' icon='icon-tree-dots' %}
+
     </div>
-    
+    <span class="round-corner"></span>
 </div>
