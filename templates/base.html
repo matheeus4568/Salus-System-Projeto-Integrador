@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     <link rel="stylesheet" href="{% static 'css/icon_moon.css' %}">
+    {% block extra_css %}{% endblock %}
     <title>{% block title %}{{ title|default:"Untitled Page" }}{% endblock %}</title>
 </head>
 
 <body>
+    <aside>
+        {% block aside %}
+
+        {% endblock %}
+    </aside>
+
+    <header>
+        {% block header %}
+
+        {% endblock %}
+    </header>
+
     <main>
         {% block main %}
+
         {% endblock %}
     </main>
 </body>

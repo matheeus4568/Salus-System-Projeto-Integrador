@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
+{% endblock %}
+
+{% block aside %}
+    {% include "components/navbar.html" with perfil=True %}
+{% endblock %}
+
+{% block header %}
+    {% include "components/header.html" with page_title="Página de Teste" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="container-border">
+            <h3>Total de requisições</h3>
+            <h4>11.345</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div>
+            <div class="container-filter-top"><p>a</p></div>
+            <div class="container-filter-bottom">
+                <h1>Requisições</h1>
+                <h2>Tabela de requisições (25)</h2>
+                <h3>Teste3</h3>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

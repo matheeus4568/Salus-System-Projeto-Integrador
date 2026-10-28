@@ -1,0 +1,40 @@
+{% load static %}
+<!-- VARIAVEIS DO HEADER -->
+<!-- title_icon: nome do arquivo svg do icone do titulo da pagina -->
+<!-- page_title: titulo da pagina -->
+<!-- secratary_name: nome da secretaria -->
+<!-- user_role: função do funcionário -->
+<!-- user_name: nome do funcionário -->
+<!-- url_secretary: url da pagina da secretaria -->
+<!-- url_profile: url da pagina do perfil -->
+
+<div class="header">
+
+    <div class="icon-title">
+        <img src="{% static 'images/icons/' %}{{ title_icon|default:'folders-img.svg' }}" alt="Ícone de {{ page_title }}">
+        <h1>{{ page_title|default:"Untitled" }}</h1>
+    </div>
+
+    <div class="header-menu">
+
+        <a class="header-menu-item" href="{{ url_secretary }}">
+            {% include 'components/icon.html' with icon='icon-secretary' %}
+            <div class="">
+            <p class="txt-sm mid-gray">Secretaria de</p>
+            <p class="txt-sm">{{ secratary_name|default:"Untitled" }}</p>
+            </div>
+        </a>
+
+        <a class="header-menu-item" href="{{ url_profile }}">
+            <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="Foto do perfil">
+            <div class="">
+            <p class="txt-sm mid-gray">{{ user_role|default:"Funcionário" }}</p>
+            <p class="txt-sm">{{ user_name|default:"Untitled" }}</p>
+            </div>
+        </a>
+
+        {% include 'components/clickable_icon.html' with url='#' icon='icon-tree-dots' %}
+
+    </div>
+    <span class="round-corner"></span>
+</div>

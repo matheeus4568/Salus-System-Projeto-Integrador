@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <ul class="navbar-menu">
+        {% for link in navbar_links %}
+        <li class="navbar-item">
+            
+            {% if request.resolver_match.view_name != link.url_name %}
+                <a href="{% url link.url_name %}" class="navbar-link">
+                    {% include 'components/icon.html' with icon=link.icon  %}
+                    <span class="navbar-label">{{ link.label }}</span>
+                </a>
+            {% else %}
+                {% include 'components/icon.html'  with  icon=link.active_icon color='var(--darker-blue)' %}
+                <span class="navbar-label" style="color: var(--dark-blue);">{{ link.label }}</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+        
+    </ul>
+</nav>
