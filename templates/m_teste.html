@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -20,6 +21,7 @@
             <h3>Total de requisições</h3>
             <h4>11.345</h4>
         </div>
+        {% include "components/info_card.html" with card_icon="icon-folder" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' %}
     </div>
 
     <div class="container">

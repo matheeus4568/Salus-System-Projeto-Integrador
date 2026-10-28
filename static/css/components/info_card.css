@@ -1,0 +1,17 @@
+.info-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+
+    width: 100%;
+
+    border-radius: var(--border-radius-md);
+}
+
+.info-card-text {
+    display: flex;
+    flex-direction: column;
+}

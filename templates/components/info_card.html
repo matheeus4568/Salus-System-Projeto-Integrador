@@ -1,0 +1,17 @@
+<!-- VARIÁVEIS INFO CARD -->
+<!-- card_icon: nome do ícone a ser exibido -->
+<!-- card_title: título do card -->
+<!-- card_value: valor do card -->
+<!-- bg_color: cor de fundo do card -->
+<!-- fg_color: cor do texto do card -->
+<!-- fit_content: se true, define a largura do card como 100% -->
+
+<div class="info-card" style="background-color: {{ bg_color|default:'var(--light-gray)' }}; color: {{ fg_color|default:'var(--black)' }}; {% if fit_content %}width: fit-content;{% endif %}">
+    {% if card_icon %}
+        {% include 'components/icon.html' with icon=card_icon color=fg_color%}
+    {% endif %}
+    <div class="info-card-text">
+        <h3>{{ card_title|default:"Untitled" }}</h3>
+        <h4>{{ card_value|default:"None" }}</h4>
+    </div>
+</div>
