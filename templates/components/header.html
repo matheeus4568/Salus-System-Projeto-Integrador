@@ -2,9 +2,11 @@
 <!-- VARIAVEIS DO HEADER -->
 <!-- title_icon: nome do arquivo svg do icone do titulo da pagina -->
 <!-- page_title: titulo da pagina -->
-<!-- name_secratary: nome da secretaria -->
-<!-- role: função do funcionário -->
-<!-- name_employee: nome do funcionário -->
+<!-- secratary_name: nome da secretaria -->
+<!-- user_role: função do funcionário -->
+<!-- user_name: nome do funcionário -->
+<!-- url_secretary: url da pagina da secretaria -->
+<!-- url_profile: url da pagina do perfil -->
 
 <div class="header">
 
@@ -15,19 +17,19 @@
 
     <div class="header-menu">
 
-        <a class="header-menu-item" href="#">
+        <a class="header-menu-item" href="{{ url_secretary }}">
             {% include 'components/icon.html' with icon='icon-secretary' %}
             <div class="">
             <p class="txt-sm mid-gray">Secretaria de</p>
-            <p class="txt-sm">{{ name_secratary|default:"Untitled" }}</p>
+            <p class="txt-sm">{{ secratary_name|default:"Untitled" }}</p>
             </div>
         </a>
 
-        <a class="header-menu-item" href="#">
+        <a class="header-menu-item" href="{{ url_profile }}">
             <img class="header-profile-picture" src="{% static 'images/placeholders/image.png' %}" alt="Foto do perfil">
             <div class="">
-            <p class="txt-sm mid-gray">{{ role|default:"Funcionário" }}</p>
-            <p class="txt-sm">{{ name_employee|default:"Untitled" }}</p>
+            <p class="txt-sm mid-gray">{{ user_role|default:"Funcionário" }}</p>
+            <p class="txt-sm">{{ user_name|default:"Untitled" }}</p>
             </div>
         </a>
 
