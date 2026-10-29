@@ -1,0 +1,43 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.input-label {
+    padding-left: var(--spacing-md);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+
+    padding: 0 var(--spacing-sm);
+    height: 44px;
+
+    background-color: var(--white);
+
+    border: 2px solid var(--mid-light-gray);
+    border-radius: var(--border-radius-xl);
+
+}
+
+.input-container:focus-within {
+    border-color: var(--blue);
+}
+
+.custom-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    padding: auto 0;
+    margin-left: var(--spacing-xs);
+
+    appearance: none;
+}
+
+.custom-input::placeholder {
+    color: var(--mid-gray);
+}

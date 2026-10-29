@@ -18,11 +18,11 @@
 }
 
 .big {
-    height: 64px;
+    height: 60px;
 }
 
 .small {
-    height: 46px;
+    height: 44px;
 }
 
 .primary-neutral {
@@ -43,7 +43,6 @@
 .secondary-neutral{
     border: 2px solid var(--mid-light-gray);
     color: var(--dark-blue);
-    background-color: var(--white);
 }
 .secondary-neutral:hover {
     background-color: var(--mid-light-gray);
