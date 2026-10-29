@@ -12,6 +12,6 @@
     {% endif %}
     <div class="info-card-text">
         <h3>{{ card_title|default:"Untitled" }}</h3>
-        <h4>{{ card_value|default:"None" }}</h4>
+        <h4>{{ card_value|default_if_none:"None" }}</h4>
     </div>
 </div>

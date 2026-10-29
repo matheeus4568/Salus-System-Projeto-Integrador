@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .m_views import *
+from RequisicoesPacientes import urls as requisicoes_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', teste, name='teste'),
 ]
+
+
+urlpatterns += requisicoes_urls.urlpatterns

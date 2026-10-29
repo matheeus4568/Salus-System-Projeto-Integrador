@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Requisições{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
+{% endblock %}
+
+{% block aside %}
+{% include "components/navbar.html" with perfil=True %}
+{% endblock %}
+
+{% block header %}
+{% include "components/header.html" with page_title="Pacientes" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+{% block main %}
+<div class="container direction-row">
+
+
+    {% include "components/info_card.html" with card_icon="icon-folder" card_title="Total de pacientes" card_value=pacientes_totais %}
+
+    {% include "components/info_card.html" with card_icon="icon-circle" bg_color='var(--pendente-bg)' fg_color='var(--pendente-fg)' card_title="Com requisições pendentes"  card_value=pacientes_requisicoes_pendentes %}
+
+    {% include "components/info_card.html" with card_icon="icon-sparkle" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' card_title="Com requisições marcadas" card_value=pacientes_requisicoes_marcadas %}
+
+    
+</div>
+<div class="container direction-column" >
+    <h2>Tablea de pacientes</h2>
+        <hr>
+    <div>
+
+        <div class="container-filter-top">
+        </div>
+        <div class="container-filter-bottom" >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Especificidades</th>
+                        <th>cartão SUS</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for paciente in pacientes %}
+                    <tr>
+                        <td>{{ paciente.nome }}</td>
+                        <td>{{ paciente.especificidades }}</td>
+                        <td>{{ paciente.cartaoSus }}</td>
+                        <td><a href="#">detalhes</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}

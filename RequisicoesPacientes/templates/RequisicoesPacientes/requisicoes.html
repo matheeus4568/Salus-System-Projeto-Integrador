@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Requisições{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
+{% endblock %}
+
+{% block aside %}
+{% include "components/navbar.html" with perfil=True %}
+{% endblock %}
+
+{% block header %}
+{% include "components/header.html" with page_title="Requisições" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+{% block main %}
+<div class="container direction-row">
+
+
+    {% include "components/info_card.html" with card_icon="icon-folder" card_title="Requisições Totais" card_value=requisicoes_totais %}
+
+    {% include "components/info_card.html" with card_icon="icon-circle" bg_color='var(--pendente-bg)' fg_color='var(--pendente-fg)' card_title="Pendentes"  card_value=requisicoes_pendentes %}
+
+    {% include "components/info_card.html" with card_icon="icon-sparkle" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' card_title="Marcadas" card_value=requisicoes_marcadas %}
+
+    {% include "components/info_card.html" with card_icon="icon-check" bg_color='var(--encerrada-bg)' fg_color='var(--encerrada-fg)' card_title="Encerradas" card_value=requisicoes_encerradas %}
+
+    {% include "components/info_card.html" with card_icon="icon-x" bg_color='var(--cancelada-bg)' fg_color='var(--cancelada-fg)' card_title="Canceladas" card_value=requisicoes_canceladas %}
+
+    
+</div>
+<div class="container direction-column" >
+    <h2>Tablea de Requisições</h2>
+        <hr>
+    <div>
+
+        <div class="container-filter-top">
+        </div>
+        <div class="container-filter-bottom" >
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recebimento</th>
+                        <th>Paciente</th>
+                        <th>Procedimento</th>
+                        <th>Status</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for requisicao in requisicoes %}
+                    <tr>
+                        <td>{{ requisicao.data_recebimento }}</td>
+                        <td>{{ requisicao.paciente }}</td>
+                        <td>{{ requisicao.procedimento }}</td>
+                        <td>{{ requisicao.status }}</td>
+                        <td><a href="#">detalhes</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}
