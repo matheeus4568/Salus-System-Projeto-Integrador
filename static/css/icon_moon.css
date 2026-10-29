@@ -31,15 +31,15 @@
 }
 .icon-two-chevron-rigth:before {
   content: "\e901";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-two-chevron-left:before {
   content: "\e902";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-tree-dots:before {
   content: "\e903";
-  font-size: 22px;
+  font-size: 20px;
 }
 .icon-sixty-plus:before {
   content: "\e904";
@@ -102,7 +102,7 @@
 }
 .icon-check:before {
   content: "\e913";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-paper:before {
   content: "\e914";
@@ -138,11 +138,11 @@
 }
 .icon-magnifying-glass:before {
   content: "\e91c";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-sparkle:before {
   content: "\e91d";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-medic:before {
   content: "\e91e";
@@ -174,11 +174,11 @@
 }
 .icon-people:before {
   content: "\e925";
-  font-size: 22px;
+  font-size: 24px;
 }
 .icon-people-solid:before {
   content: "\e926";
-  font-size: 22px;
+  font-size: 24px;
 }
 .icon-monitor:before {
   content: "\e927";
@@ -190,15 +190,15 @@
 }
 .icon-circle:before {
   content: "\e929";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-profile:before {
   content: "\e92a";
-  font-size: 22px;
+  font-size: 24px;
 }
 .icon-profile-solid:before {
   content: "\e92b";
-  font-size: 22px;
+  font-size: 24px;
 }
 .icon-clipboard:before {
   content: "\e92c";
@@ -214,7 +214,7 @@
 }
 .icon-folder-plus:before {
   content: "\e92f";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-x:before {
   content: "\e930";
@@ -262,15 +262,15 @@
 }
 .icon-chevron-up:before {
   content: "\e93b";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-chevron-right:before {
   content: "\e93c";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-chevron-left:before {
   content: "\e93d";
-  font-size: 22px;
+  font-size: 10px;
 }
 .icon-wave:before {
   content: "\e93e";
@@ -286,5 +286,5 @@
 }
 .icon-x:before {
   content: "\e941";
-  font-size: 22px;
+  font-size: 10px;
 }

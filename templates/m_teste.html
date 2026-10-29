@@ -18,6 +18,14 @@
 {% endblock %}
 
 {% block main %}
+    <div class="container direction-row gap-sm">
+        {% include "components/info_card.html" with card_icon="icon-folder" %}
+        {% include "components/info_card.html" with card_icon="icon-circle" bg_color='var(--pendente-bg)' fg_color='var(--pendente-fg)' %}
+        {% include "components/info_card.html" with card_icon="icon-sparkle" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' %}
+        {% include "components/info_card.html" with card_icon="icon-check" bg_color='var(--encerrada-bg)' fg_color='var(--encerrada-fg)' %}
+        {% include "components/info_card.html" with card_icon="icon-x" bg_color='var(--cancelada-bg)' fg_color='var(--cancelada-fg)' %}
+    </div>
+
     <div class="container">
         <div class="flex justfy-content-space-between">
             <h2>Tablea de Pacientes</h2>
