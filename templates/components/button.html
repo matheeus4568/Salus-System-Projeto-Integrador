@@ -1,0 +1,35 @@
+<!-- VARIÁVEIS DO BOTÃO -->
+<!-- button_size: tamanho do botão (big ou small) -->
+<!-- button_hierarchy: hierarquia do botão (primary ou secondary) -->
+<!-- button_intent: intenção do botão (neutral ou danger) -->
+<!-- button_icon: nome da classe do ícone do botão -->
+<!-- button_text: texto do botão -->
+<!-- disabled: se o botão está desativado (True ou nada) -->
+<!-- properties: propriedades adicionais do botão (ex: onclick, type, etc.) -->
+
+<button class="button {{ button_size|default:'big' }} {{ button_hierarchy|default:'primary' }}-{{ button_intent|default:'neutal' }}" {% if disabled %}disabled{% endif %} {{ properties }}>
+
+    {% if button_icon %}
+
+        {% if button_hierarchy == "primary" %}
+            {% include 'components/icon.html' with icon=button_icon color='var(--white)' %}
+            
+        {% elif button_hierarchy == "secondary" %}
+
+            {% if button_intent == "neutral" %}
+                {% include 'components/icon.html' with icon=button_icon color='var(--dark-blue)' %}
+            {% elif button_intent == "danger" %}
+                {% include 'components/icon.html' with icon=button_icon color='var(--red)' %}
+            {% endif %}
+
+        {% endif %}
+    {% endif %}
+
+    {% if button_text %}
+        {% if button_size == "big" %}
+            <p class="txt-lg">{{ button_text }}</p>
+        {% elif button_size == "small" %}
+            <p class="txt-md">{{ button_text }}</p>
+        {% endif %}
+    {% endif %}
+</button>

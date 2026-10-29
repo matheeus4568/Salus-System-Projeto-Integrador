@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/button.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -26,6 +27,7 @@
 
     <div class="container">
         <h2>Tablea de Pacientes</h2>
+        {% include "components/button.html" with button_size="big" button_hierarchy="primary" button_intent="neutral" button_icon="icon-folder-plus" button_text="Adicionar paciente" disabled=True %}
         <hr>
         <div>
             <div class="container-filter-top"><p>a</p></div>

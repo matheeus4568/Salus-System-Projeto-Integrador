@@ -97,6 +97,7 @@ button {
     --black: #484848;
 
     --red: #BD1717;
+    --darker-red: #8B0F0F;
     --green: #43A903;
 
     --light-blue: #C2E7FF;
@@ -238,6 +239,11 @@ hr {
 .txt-md{ 
     font-size: var(--fs-sm);
     font-weight: var(--fw-medium);
+}
+
+.txt-lg{
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
 }
 
 /*Link (sem o tamanho) no Figma*/
