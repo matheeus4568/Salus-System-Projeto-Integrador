@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/button.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/input.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -51,15 +52,26 @@
             </div>
         </div>
     </div>
+
+
     <div class="container">
-        <div class="container-border">
-            <h3>Total de requisições</h3>
-            <h4>11.345</h4>
-        </div>
-        {% include "components/info_card.html" with card_icon="icon-folder" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' %}
+        <h2>Teste de Formulário</h2>
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        {% include 'components/field.html' with field=form.nome %}
+        {% include 'components/field.html' with field=form.email %}
+        {% include 'components/field.html' with field=form.data_nascimento %}
+        {% include 'components/field.html' with field=form.estado %}
+        {% include 'components/field.html' with field=form.observacoes %}
+        
+        <br>
+        {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" button_text="Salvar" property="type='submit'" %}
+    </form>
     </div>
 
-    
+
 
     <div class="container">
         <h2>Tablea de Pacientes</h2>

@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .m_forms import TesteForm
+
 
 def teste(request):
-    return render(request, 'm_teste.html')
+    form = TesteForm()
+    
+    return render(request, 'm_teste.html', {'form': form})

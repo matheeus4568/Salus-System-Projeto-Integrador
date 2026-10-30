@@ -1,0 +1,17 @@
+<div class="field-wrapper">
+    <!-- 1. O Label -->
+    <label class="field-label txt-md" for="{{ field.id_for_label }}">
+        {{ field.label }}
+    </label>
+
+    <!-- 2. O Input nativo do Django -->
+    <div class="field-container">
+        <!-- as_widget renderiza o <input>, <select> ou <textarea> já com o name, id e value corretos -->
+        {{ field.as_widget }}
+    </div>
+
+    <!-- 3. Mensagens de erro (opcional, mas muito útil) -->
+    {% if field.errors %}
+        <span class="field-error txt-sm">{{ field.errors.0 }}</span>
+    {% endif %}
+</div>

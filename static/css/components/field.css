@@ -1,0 +1,116 @@
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.field-label {
+    padding-left: var(--spacing-md);
+}
+
+.field-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 0 var(--spacing-sm);
+    height: 44px;
+
+    background-color: var(--white);
+
+    border: 2px solid var(--mid-light-gray);
+    border-radius: var(--border-radius-xl);
+}
+
+.field-container:focus-within {
+    border-color: var(--blue);
+}
+
+.field-container input,
+.field-container select,
+.field-container textarea {
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    
+    padding: 0;
+    margin-left: var(--spacing-xs);
+    
+    font-family: inherit; 
+    font-size: inherit; 
+    color: var(--text-main);
+    
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.field-container select::-ms-expand {
+    display: none;
+}
+
+.field-container input::placeholder,
+.field-container textarea::placeholder {
+    color: var(--mid-gray);
+}
+
+
+.field-container input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.field-container:has(input[type="date"])::after {
+    font-family: 'cones-SALUS';
+    content: "\e909";
+    font-size: 22px;
+
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    pointer-events: none;
+    color: var(--mid-gray);
+}
+
+
+.field-container:has(input[type="date"]) input {
+    padding-right: var(--spacing-md);
+}
+
+
+.field-container select {
+    cursor: pointer;
+    padding-right: var(--spacing-md);
+}
+
+.field-container:has(select)::after {
+    font-family: 'cones-SALUS';
+    content: "\e93a";
+    font-size: 10px;
+
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    pointer-events: none;
+    color: var(--mid-gray);
+}
+
+
+.field-container textarea {
+    resize: vertical;
+    min-height: 129px;
+}
+
+.field-container:has(textarea) {
+    border-radius: var(--border-radius-lg);
+    height: auto;
+    min-height: 129px;
+    align-items: flex-start;
+    padding: var(--spacing-sm);
+}
