@@ -94,7 +94,7 @@
 }
 .icon-card:before {
   content: "\e911";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-mail:before {
   content: "\e912";
@@ -162,7 +162,7 @@
 }
 .icon-person:before {
   content: "\e922";
-  font-size: 22px;
+  font-size: 24px;
 }
 .icon-person-plus:before {
   content: "\e923";

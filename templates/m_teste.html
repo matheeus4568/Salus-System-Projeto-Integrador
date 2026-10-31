@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/components/button.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/input.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/info_display.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -25,6 +26,18 @@
         {% include "components/info_card.html" with card_icon="icon-sparkle" bg_color='var(--marcada-bg)' fg_color='var(--marcada-fg)' %}
         {% include "components/info_card.html" with card_icon="icon-check" bg_color='var(--encerrada-bg)' fg_color='var(--encerrada-fg)' %}
         {% include "components/info_card.html" with card_icon="icon-x" bg_color='var(--cancelada-bg)' fg_color='var(--cancelada-fg)' %}
+    </div>
+    
+    <div class="container">
+        <h2>Tablea de Pacientes</h2>
+        <hr>
+        <div class="container-border">
+            {% include "components/info_display.html" with label="Paciente" has_info=True %}
+            {% include "components/info_display.html" with label="Paciente" has_info=True info="Matheus Rodrigues Oliveira" icon="icon-person" %}
+            {% include "components/info_display.html" with label="Paciente" has_info=True info="Matheus Rodrigues Oliveira" picture=True profile_url="placeholders/image.png" %}
+            {% include "components/info_display.html" with label="Documento" has_info=True info="000.000.000-00" has_link=True link_text="Acesse" icon="icon-card" %}
+            {% include "components/info_display.html" with label="Documento" has_link=True link_text="Acesse" info="000.000.000-00" icon="icon-card" %}
+        </div>
     </div>
 
     <div class="container">
@@ -45,7 +58,7 @@
             <div class="container-filter-bottom">
                 <h1>Requisições</h1>
                 <h2>Tabela de requisições (25)</h2>
-                <h3>Teste3</h3>
+                
             </div>
         </div>
     </div>
@@ -68,34 +81,5 @@
         {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" button_text="Salvar" property="type='submit'" %}
     </form>
     </div>
-
-
-
-    <div class="container">
-        <h2>Tablea de Pacientes</h2>
-        <hr>
-        <div>
-            <div class="container-filter-top"><p>a</p></div>
-            <div class="container-filter-bottom">
-                <h1>Requisições</h1>
-                <h2>Tabela de requisições (25)</h2>
-                <h3>Teste3</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h2>Tablea de Pacientes</h2>
-        <hr>
-        <div>
-            <div class="container-filter-top"><p>a</p></div>
-            <div class="container-filter-bottom">
-                <h1>Requisições</h1>
-                <h2>Tabela de requisições (25)</h2>
-                <h3>Teste3</h3>
-            </div>
-        </div>
-    </div>
-
 
 {% endblock %}
