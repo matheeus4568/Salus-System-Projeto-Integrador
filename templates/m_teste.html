@@ -37,11 +37,8 @@
             <div class="container-filter-top">
                 <div class="flex justfy-content-space-between">
                     <div class="flex gap-sm">
-                        {% include 'components/input.html' with input_type="text" input_width="158px" right_icon="icon-chevron-down" placeholder="Ação" %}
                         {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Aplicar" %}
                     </div>
-
-                    {% include 'components/input.html' with left_icon="icon-magnifying-glass" %}
                 </div>
             </div>
 
@@ -57,7 +54,7 @@
     <div class="container">
         <h2>Teste de Formulário</h2>
     
-    <form method="POST" action="">
+    <form method="POST" action="" class="flex direction-column gap-md">
         {% csrf_token %}
         
         {% include 'components/field.html' with field=form.nome %}
@@ -65,6 +62,7 @@
         {% include 'components/field.html' with field=form.data_nascimento %}
         {% include 'components/field.html' with field=form.estado %}
         {% include 'components/field.html' with field=form.observacoes %}
+        {% include 'components/field.html' with field=form.documento %}
         
         <br>
         {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" button_text="Salvar" property="type='submit'" %}

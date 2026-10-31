@@ -332,6 +332,10 @@ hr {
     align-items: space-between;
 }
 
+.align-items-end {
+    align-items: flex-end;
+}
+
 .gap-sm {
     gap: var(--spacing-sm);
 }

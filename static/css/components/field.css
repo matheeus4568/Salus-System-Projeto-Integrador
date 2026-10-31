@@ -31,6 +31,7 @@
 .field-container textarea {
     flex: 1;
     width: 100%;
+    height: 100%;
     border: none;
     outline: none;
     background: transparent;
@@ -72,7 +73,9 @@
     top: 50%;
     transform: translateY(-50%);
 
-    pointer-events: none;
+    pointer-events: auto; 
+    cursor: pointer;
+
     color: var(--mid-gray);
 }
 
@@ -113,4 +116,19 @@
     min-height: 129px;
     align-items: flex-start;
     padding: var(--spacing-sm);
+}
+
+.file-name {
+    flex: 1;
+    color: var(--mid-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: var(--spacing-xs);
+    margin-left: 0;
+}
+
+
+.field-error {
+    color: var(--red);
 }

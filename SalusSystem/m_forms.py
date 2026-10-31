@@ -31,3 +31,12 @@ class TesteForm(forms.Form):
             'placeholder': 'Escreva suas observações aqui...',
         })
     )
+    
+    documento = forms.FileField(
+        label="Anexar Documento",
+        required=False, # ou True, se for obrigatório
+        widget=forms.FileInput(attrs={
+            'id': 'file-upload', # Vamos usar esse ID no JS
+            'style': 'display: none;' # Esconde o input nativo
+        })
+    )
