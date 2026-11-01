@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     <link rel="stylesheet" href="{% static 'css/icon_moon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/breadcrumbs.css' %}">
     {% block extra_css %}{% endblock %}
     <title>{% block title %}{{ title|default:"Untitled Page" }}{% endblock %}</title>
 </head>
@@ -26,6 +27,7 @@
     </header>
 
     <main>
+        {% include 'components/breadcrumbs.html' %}
         {% block main %}
 
         {% endblock %}

@@ -1,0 +1,17 @@
+{% if breadcrumbs|length > 1 %}
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+
+        {% for crumb in breadcrumbs %}
+            <li class="breadcrumb-item txt-sm">
+                {% if crumb.url %}
+                    <a href="{{ crumb.url }}" class="txt-link">{{ crumb.title }}</a>
+                {% else %}
+                    <span class="">{{ crumb.title }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+        
+    </ol>
+</nav>
+{% endif %}

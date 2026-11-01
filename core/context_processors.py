@@ -9,3 +9,32 @@ def navbar_links(request):
             {"label": "Perfil", "url_name": "teste", "icon": "icon-profile", "active_icon": "icon-profile-solid"},
         ]
     }
+
+def breadcrumbs(request):
+    if request.path == '/' or request.path.startswith('/admin/'):
+        return {'breadcrumbs': []}
+
+    caminho = request.path.strip('/').split('/')
+    
+    breadcrumbs = []
+    url_acumulada = ''
+
+    for parte in caminho:
+        url_acumulada += f'/{parte}'
+        
+        titulo = parte.replace('-', ' ').replace('_', ' ').title()
+        
+        is_id = parte.isdigit()
+        if is_id:
+            titulo = f"Detalhes #{parte}"
+            
+
+        breadcrumbs.append({
+            'title': titulo,
+            'url': None if is_id else url_acumulada 
+        })
+        
+    if breadcrumbs:
+        breadcrumbs[-1]['url'] = None
+
+    return {'breadcrumbs': breadcrumbs}
