@@ -4,11 +4,13 @@
 <tbody>
     {% for item in list_items %}
         <tr>
-            <td>{{ item.nome }}</td>
-            <td>{{ item.especificidades }}</td>
-            <td>{{ item.cartaoSus }}</td>
-            <td>mais</td>
-            <td><a href="#">detalhes {{ item.id }}</a></td>
+            <td style="width: 35%;" >{{ item.nome }}</td>
+            <td style="width: 10%;" >{{ item.especificidades }}</td>
+            <td style="width: 35%;" >{{ item.cartaoSus }}</td>
+            <td style="width: 10%;" >mais</td>
+            <td  style="width: 10%;" >
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
+            </td>
         </tr>
     {% endfor %}
 </tbody>
