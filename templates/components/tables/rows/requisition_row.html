@@ -1,0 +1,16 @@
+{% load static %}
+<!-- VARIAVEIS DO REQUISITION_ROW -->
+<!-- list_items: Lista de itens a serem exibidos -->
+<tbody>
+    {% for item in list_items %}
+        <tr>
+            <td>{{ item.data_recebimento }}</td>
+            <td>{{ item.paciente }}</td>
+            <td>{{ item.procedimento }}</td>
+            <td>{{ item.especificidades }}</td>
+            <td>{{ item.prioridade }}</td>
+            <td>{{ item.status }}</td>
+            <td><a href="#">detalhes {{ item.id }}</a></td>
+        </tr>
+    {% endfor %}
+</tbody>

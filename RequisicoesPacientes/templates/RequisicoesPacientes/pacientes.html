@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/clickable_icon.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/table.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -36,26 +37,7 @@
         <div class="container-filter-top">
         </div>
         <div class="container-filter-bottom" >
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Especificidades</th>
-                        <th>cartão SUS</th>
-                        <th>Detalhes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for paciente in pacientes %}
-                    <tr>
-                        <td>{{ paciente.nome }}</td>
-                        <td>{{ paciente.especificidades }}</td>
-                        <td>{{ paciente.cartaoSus }}</td>
-                        <td><a href="#">detalhes</a></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            {% include "components/tables/patient_table.html" with list_columns=lista_colunas list_items=pacientes %}
         </div>
     </div>
     </div>

@@ -11,6 +11,8 @@ def requisicaoLista(request):
     requisicoes_encerradas = requisicoes.filter(status='encerrada').count()
     requisicoes_canceladas = requisicoes.filter(status='cancelada').count()
     
+    lista_colunas = ['Recebimento', 'Paciente', 'Procedimento', 'Especificidades', 'Prioridade','Status', 'Ações']
+    
     context = {
         'requisicoes': requisicoes,
         'requisicoes_totais': requisicoes_totais,
@@ -18,6 +20,7 @@ def requisicaoLista(request):
         'requisicoes_marcadas': requisicoes_marcadas,
         'requisicoes_encerradas': requisicoes_encerradas,
         'requisicoes_canceladas': requisicoes_canceladas,
+        'lista_colunas': lista_colunas,
     }
     return render(request, 'RequisicoesPacientes/requisicoes.html', context)
 
@@ -30,12 +33,14 @@ def pacienteLista(request):
     pacientes_totais = pacientes.count() 
     pacientes_requisicoes_pendentes = pacientes.filter(requisicoes__status='pendente').count()
     pacientes_requisicoes_marcadas = pacientes.filter(requisicoes__status='marcada').count()
+    lista_colunas = ['Nome', 'Especificidades', 'Cartão SUS','Mais', 'Ações']
     
     context = {
         'pacientes': pacientes,
         'pacientes_totais': pacientes_totais,
         'pacientes_requisicoes_pendentes': pacientes_requisicoes_pendentes,
         'pacientes_requisicoes_marcadas': pacientes_requisicoes_marcadas,
+        'lista_colunas': lista_colunas,
     }
     
     return render(request, 'RequisicoesPacientes/pacientes.html', context)

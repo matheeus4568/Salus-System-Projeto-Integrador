@@ -1,0 +1,11 @@
+{% load static %}
+<!-- VARIAVEIS DO TABLE_HEADER -->
+<!-- list_columns: Lista de titulos de colunas a serem exibidos no header da tabela -->
+
+<thead class="table-header">
+    <tr>
+        {% for column in list_columns %}
+            <th>{{ column }}</th>
+        {% endfor %}
+    </tr>
+</thead>

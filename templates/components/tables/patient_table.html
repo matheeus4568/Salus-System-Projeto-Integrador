@@ -1,0 +1,15 @@
+{% load static %}
+<!-- VARIAVEIS DO PATIENT_TABLE -->
+<!-- list_columns: Lista de colunas a serem exibidas, incluindo os títulos no header_table -->
+<!-- list_items: Lista de itens a serem exibidos -->
+
+<table class="table">
+    {% include 'components/tables/table_header.html' with list_columns=list_columns %}
+    {% if list_items %}
+        {% include 'components/tables/rows/patient_row.html' with list_items=list_items %}
+    {% else %}
+        <tr>
+            <td colspan="{{ list_columns|length }}">Nenhuma requisição encontrada.</td>
+        </tr>
+    {% endif %}
+</table>
