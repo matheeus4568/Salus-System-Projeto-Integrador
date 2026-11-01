@@ -97,6 +97,7 @@ button {
     --black: #484848;
 
     --red: #BD1717;
+    --darker-red: #8B0F0F;
     --green: #43A903;
 
     --light-blue: #C2E7FF;
@@ -160,13 +161,14 @@ button {
     --fs-xl: 35px;
     /*36 no figma*/
 
-    --fw-regular: 400;
-    --fw-medium: 500;
-    /*medium no figma*/
-    --fw-semibold: 600;
-    /*semibold no figma*/
-    --fw-bold: 700;
-    /*bold no figma*/
+    --fw-regular: 400; 
+    --fw-medium:  500; /*medium no figma*/
+    --fw-semibold:600; /*semibold no figma*/
+    --fw-bold:    700; /*bold no figma*/
+
+    /* Ícones */
+    --chevron-down-icon: url("{% static 'icons/seu-chevron.svg' %}");
+    --calendar-icon: url("{% static 'icons/seu-calendario.svg' %}");
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -186,8 +188,7 @@ body {
 }
 
 /*Corpo Título no Figma*/
-h1,
-h3 {
+h1, h3{
     font-size: var(--fs-md);
     font-weight: var(--fw-semibold);
 }
@@ -200,13 +201,6 @@ h2 {
     margin: 14.5px 0 14.5px 12px;
 }
 
-/*LETREIRO Título no Figma*/
-h4 {
-    font-family: var(--system-font-alt);
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-bold);
-}
-
 hr {
     border: 0;
     height: 2px;
@@ -216,36 +210,6 @@ hr {
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 4. UTILITÁRIOS (classes de uso geral)
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-
-/* Display */
-.flex {
-    display: flex;
-}
-
-.direction-row {
-    flex-direction: row;
-}
-
-.direction-column {
-    flex-direction: column;
-}
-
-.justfy-content-center {
-    justify-content: center;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.justfy-content-space-between {
-    justify-content: space-between;
-}
-
-.align-items-space-between {
-    align-items: space-between;
-}
-
 /* Tipografia */
 
 /*Small no Figma*/
@@ -254,10 +218,33 @@ hr {
     font-weight: var(--fw-medium);
 }
 
+.txt-weak {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    font-style: italic;
+}
+
 /*Corpo no Figma*/
 .txt-md {
     font-size: var(--fs-sm);
     font-weight: var(--fw-medium);
+}
+
+.txt-lg{
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+}
+
+/*LETREIRO Título no Figma*/
+.txt-xl{
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+}
+
+.txt-xxl{
+    font-family: var(--system-font-alt);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
 }
 
 /*Link (sem o tamanho) no Figma*/
@@ -271,7 +258,11 @@ hr {
     text-decoration: underline;
 }
 
-.mid-gray {
+.sub-title {
+    margin: var(--spacing-lg) 0 0 var(--spacing-lg);
+}
+
+.mid-gray{
     color: var(--mid-gray);
 }
 
@@ -302,7 +293,7 @@ hr {
     display: flex;
     flex-direction: column;
 
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     gap: var(--spacing-sm);
 }
 
@@ -316,7 +307,7 @@ hr {
     display: flex;
     flex-direction: column;
 
-    padding: 0 0 0 var(--spacing-md);
+    padding: 0 0 var(--spacing-md) 0;
 
     border-style: solid;
     border-width: 0 4px 4px 4px;
@@ -338,6 +329,47 @@ hr {
 
     border-style: solid;
     border-width: 4px;
-    border-color: var(--light-gray);
+    border-color: var(--light-gray);   
 }
 
+
+/* Display */
+.flex {
+    display: flex;
+}
+
+.direction-row {
+    flex-direction: row;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justfy-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justfy-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-space-between {
+    align-items: space-between;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.gap-md {
+    gap: var(--spacing-md);
+}

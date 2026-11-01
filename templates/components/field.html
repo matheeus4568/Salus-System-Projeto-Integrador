@@ -1,0 +1,27 @@
+<div class="field-wrapper">
+    <label class="field-label txt-md" for="{{ field.id_for_label }}">
+        {{ field.label }}
+    </label>
+
+    {% if field.field.widget.input_type == 'file' %}
+
+        <div class="flex flex-direction-row align-items-end">
+            
+            {{ field.as_widget }}
+            
+            {% include 'components/button.html' with button_icon="icon-file" button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Selecionar arquivo" properties='type="button" id="btn-upload"' %}
+            <span class="file-name txt-md" id="file-name-display">Nenhum arquivo selecionado</span>
+        </div>
+
+    {% else %}
+
+        <div class="field-container {% if field.field.widget.input_type == 'file' %}file-container{% endif %}">
+            {{ field.as_widget }}
+        </div>
+
+    {% endif %}
+
+    {% if field.errors %}
+        <span class="field-error txt-sm">{{ field.errors.0 }}</span>
+    {% endif %}
+</div>

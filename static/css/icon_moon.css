@@ -27,199 +27,264 @@
 
 .icon-plus:before {
   content: "\e900";
+  font-size: 22px;
 }
 .icon-two-chevron-rigth:before {
   content: "\e901";
+  font-size: 10px;
 }
 .icon-two-chevron-left:before {
   content: "\e902";
+  font-size: 10px;
 }
 .icon-tree-dots:before {
   content: "\e903";
+  font-size: 20px;
 }
 .icon-sixty-plus:before {
   content: "\e904";
+  font-size: 22px;
 }
 .icon-alergic-hand:before {
   content: "\e905";
+  font-size: 22px;
 }
 .icon-attention:before {
   content: "\e906";
+  font-size: 22px;
 }
 .icon-download:before {
   content: "\e907";
+  font-size: 22px;
 }
 .icon-padlock-key:before {
   content: "\e908";
+  font-size: 22px;
 }
 .icon-calendar:before {
   content: "\e909";
+  font-size: 22px;
 }
 .icon-house:before {
   content: "\e90a";
 }
 .icon-cellphone:before {
   content: "\e90b";
+  font-size: 22px;
 }
 .icon-checkbox:before {
   content: "\e90c";
+  font-size: 22px;
 }
 .icon-checkbox-solid:before {
   content: "\e90d";
+  font-size: 22px;
 }
 .icon-danger:before {
   content: "\e90e";
+  font-size: 22px;
 }
 .icon-wheelchair-user:before {
   content: "\e90f";
+  font-size: 22px;
 }
 .icon-recent-x:before {
   content: "\e910";
+  font-size: 22px;
 }
 .icon-card:before {
   content: "\e911";
+  font-size: 19px;
 }
 .icon-mail:before {
   content: "\e912";
+  font-size: 22px;
 }
 .icon-check:before {
   content: "\e913";
+  font-size: 10px;
 }
-.icon-paper:before {
+.icon-file:before {
   content: "\e914";
+  font-size: 22px;
 }
 .icon-circle-triangle-square:before {
   content: "\e915";
+  font-size: 25px;
 }
 .icon-pregnancy:before {
   content: "\e916";
+  font-size: 22px;
 }
 .icon-printer:before {
   content: "\e917";
+  font-size: 22px;
 }
 .icon-information:before {
   content: "\e918";
+  font-size: 22px;
 }
 .icon-pencil:before {
   content: "\e919";
+  font-size: 22px;
 }
 .icon-horizontal-line:before {
   content: "\e91a";
+  font-size: 22px;
 }
 .icon-trash:before {
   content: "\e91b";
+  font-size: 22px;
 }
-.icon-lupe:before {
+.icon-magnifying-glass:before {
   content: "\e91c";
+  font-size: 19px;
 }
 .icon-sparkle:before {
   content: "\e91d";
+  font-size: 10px;
 }
 .icon-medic:before {
   content: "\e91e";
+  font-size: 29px;
 }
 .icon-open-eye:before {
   content: "\e91f";
+  font-size: 22px;
 }
 .icon-closed-eye:before {
   content: "\e920";
+  font-size: 22px;
 }
 .icon-ribbon:before {
   content: "\e921";
+  font-size: 22px;
 }
 .icon-person:before {
   content: "\e922";
+  font-size: 24px;
 }
 .icon-person-plus:before {
   content: "\e923";
+  font-size: 22px;
 }
 .icon-person-x:before {
   content: "\e924";
+  font-size: 22px;
 }
 .icon-people:before {
   content: "\e925";
+  font-size: 24px;
 }
 .icon-people-solid:before {
   content: "\e926";
+  font-size: 24px;
 }
 .icon-monitor:before {
   content: "\e927";
+  font-size: 22px;
 }
 .icon-monitor-solid:before {
   content: "\e928";
+  font-size: 22px;
 }
 .icon-circle:before {
   content: "\e929";
+  font-size: 10px;
 }
 .icon-profile:before {
   content: "\e92a";
+  font-size: 24px;
 }
 .icon-profile-solid:before {
   content: "\e92b";
+  font-size: 24px;
 }
 .icon-clipboard:before {
   content: "\e92c";
+  font-size: 26px;
 }
 .icon-triangle-up-triangle-down:before {
   content: "\e92d";
+  font-size: 22px;
 }
 .icon-folder:before {
   content: "\e92e";
+  font-size: 22px;
 }
 .icon-folder-plus:before {
   content: "\e92f";
+  font-size: 19px;
 }
 .icon-folder-x:before {
   content: "\e930";
+  font-size: 19px;
 }
 .icon-folder-check:before {
   content: "\e931";
+  font-size: 19px;
 }
 .icon-folder-sparkle:before {
   content: "\e932";
+  font-size: 19px;
 }
 .icon-folder-circle:before {
   content: "\e933";
+  font-size: 19px;
 }
 .icon-folder-arrow-down:before {
   content: "\e934";
+  font-size: 19px;
 }
 .icon-folder-arrow-up:before {
   content: "\e935";
+  font-size: 19px;
 }
 .icon-folders:before {
   content: "\e936";
+  font-size: 22px;
 }
 .icon-folders-solid:before {
   content: "\e937";
+  font-size: 22px;
 }
 .icon-secretary:before {
   content: "\e938";
+  font-size: 22px;
 }
 .icon-secretary-solid:before {
   content: "\e939";
+  font-size: 22px;
 }
 .icon-chevron-down:before {
   content: "\e93a";
+  font-size: 10px;
 }
 .icon-chevron-up:before {
   content: "\e93b";
+  font-size: 10px;
 }
 .icon-chevron-right:before {
   content: "\e93c";
+  font-size: 10px;
 }
 .icon-chevron-left:before {
   content: "\e93d";
+  font-size: 10px;
 }
 .icon-wave:before {
   content: "\e93e";
+  font-size: 22px;
 }
 .icon-square-solid:before {
   content: "\e93f";
+  font-size: 22px;
 }
 .icon-person-sparkle:before {
   content: "\e940";
+  font-size: 22px;
 }
 .icon-x:before {
   content: "\e941";
+  font-size: 10px;
 }

@@ -1,0 +1,40 @@
+{% load static %}
+<!-- VARIÁVEIS DO INFO DISPLAY -->
+<!-- icon: Ícone a ser exibido -->
+<!-- picture: Se true, exibe uma imagem de perfil ao invés do ícone -->
+<!-- profile_url: URL da imagem de perfil -->
+<!-- label: Label do campo -->
+<!-- has_info: Se true, exibe a informação -->
+<!-- info: Informação a ser exibida -->
+<!-- has_link: Se true, exibe o link -->
+<!-- link: Se true, exibe um link -->
+<!-- link_url: URL do link -->
+<!-- link_text: Texto do link -->
+<!-- width: Se a largura não for 100% configure aqui -->
+
+<div class="info-display-wrapper" style="width: {{ width|default:'' }};">
+    
+    {% if icon %}
+        {% include 'components/icon.html' with icon=icon %}
+    {% elif picture %}
+        <img class="info-display-picture" src="{% static 'images/' %}{{ profile_url|default:'placeholders/image.png' }}" alt="Foto de {{ label }}">
+    {% endif %}
+
+    <div class="info-display-box">
+        <span class="info-display-label txt-sm">{{ label }}</span>
+        
+        {% if has_info %}
+            <p class="txt-md">{{ info|default:'-' }}</p>
+        {% endif %}
+
+        {% if has_link %}
+            {% if link_url %}
+                <a href="{{ link_url }}" target="_blank" rel="noopener noreferrer" class="txt-link txt-md">
+                    {{ link_text|default:"Visualizar Documento" }}
+                </a>
+            {% else %}
+                <span class="txt-weak">Sem anexo</span>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
