@@ -23,11 +23,11 @@
 }
 
 .info-display-label {
-  text-shadow: 
+    text-shadow: 
     -1px -1px 0 var(--white),  
-     1px -1px 0 var(--white),
+    1px -1px 0 var(--white),
     -1px  1px 0 var(--white),
-     1px  1px 0 var(--white);
+    1px  1px 0 var(--white);
 
     position: absolute;
     top: -8px;

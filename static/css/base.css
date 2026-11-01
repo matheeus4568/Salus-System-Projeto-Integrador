@@ -209,6 +209,12 @@ hr {
     font-weight: var(--fw-medium);
 }
 
+.txt-weak {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    font-style: italic;
+}
+
 /*Corpo no Figma*/
 .txt-md{ 
     font-size: var(--fs-sm);
