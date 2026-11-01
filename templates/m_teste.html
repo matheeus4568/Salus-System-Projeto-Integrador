@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/components/input.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/info_display.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/table_row.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -76,16 +77,21 @@
 
         <div>
             <div class="container-filter-top">
-                <div class="flex justfy-content-space-between">
-                    <div class="flex gap-sm">
-                        {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Aplicar" %}
+                <form method="POST" action="" class="flex direction-column gap-md">
+                    {% csrf_token %}
+                    
+                    <div class="flex direction-row gap-sm">
+                        {% include 'components/field.html' with field=form.nome %}
+                        {% include 'components/field.html' with field=form.estado %}
+                        {% include 'components/field.html' with field=form.estado %}
+                        {% include 'components/field.html' with field=form.estado %}
+                        {% include 'components/field.html' with field=form.estado %}
                     </div>
-                </div>
+                </form>
             </div>
 
             <div class="container-filter-bottom">
-                <h1>Requisições</h1>
-                <h2>Tabela de requisições (25)</h2>
+                {% include 'components/table_row.html' with has_checkbox=True has_details=True info="000.000.000-00" %}
                 
             </div>
         </div>

@@ -1,0 +1,57 @@
+<div class="table-wrapper">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                {% if has_checkbox %}
+                    <th>{% include 'components/clickable_icon.html' with icon="icon-checkbox" %}</th>
+                {% endif %}
+
+                {% for header in headers %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+                
+                {% if has_details %}
+                    <th>Detalhes</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    {% if has_checkbox %}
+                        <td>
+                            {% include 'components/clickable_icon.html' with icon="icon-checkbox" %}
+                        </td>
+                    {% endif %}
+
+                    {% for cell in row %}
+                        {% if cell.type == 'especificidades' %}
+                        
+                        {% elif cell.type == 'badge' %}
+                        
+                        <td>
+                            {% if cell %}
+                                {{ cell }}
+                            {% else %}
+                                <span class="text-empty">—</span>
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+
+                    {% if has_details %}
+                        <td>
+                            {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" properties='type="button"' %}
+                        </td>
+                    {% endif %}
+                </tr>
+            {% empty %}
+                <!-- Caso a lista esteja vazia -->
+                <tr>
+                    <td colspan="10" class="text-center txt-weak" style="padding: 20px;">
+                        Nenhum registro encontrado.
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

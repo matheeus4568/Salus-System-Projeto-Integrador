@@ -96,6 +96,9 @@ button {
     --mid-gray: #767676;
     --black: #484848;
 
+    --op-10: rgba(0, 0, 0, 0.1);
+    --op-20: rgba(0, 0, 0, 0.2);
+
     --red: #BD1717;
     --darker-red: #8B0F0F;
     --green: #43A903;

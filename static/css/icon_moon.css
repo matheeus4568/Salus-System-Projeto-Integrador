@@ -74,11 +74,11 @@
 }
 .icon-checkbox:before {
   content: "\e90c";
-  font-size: 22px;
+  font-size: 17px;
 }
 .icon-checkbox-solid:before {
   content: "\e90d";
-  font-size: 22px;
+  font-size: 17px;
 }
 .icon-danger:before {
   content: "\e90e";

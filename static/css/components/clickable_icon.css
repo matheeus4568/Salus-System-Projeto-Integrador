@@ -9,11 +9,11 @@
 }
 
 .clickable-icon:hover {
-    background-color: var(--light-gray);
+    background-color: var(--op-10);
     border-radius: 50%;
 }
 
 .clickable-icon:active {
-    background-color: var(--mid-light-gray);
+    background-color: var(--op-20);
     border-radius: 50%;
 }

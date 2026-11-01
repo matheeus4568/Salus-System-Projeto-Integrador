@@ -87,7 +87,7 @@
 
 .field-container select {
     cursor: pointer;
-    padding-right: var(--spacing-md);
+    padding-right: var(--spacing-xl);
 }
 
 .field-container:has(select)::after {
