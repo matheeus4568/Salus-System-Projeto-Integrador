@@ -172,7 +172,7 @@ body{
 }
 
 /*Corpo Título no Figma*/
-h1, h3 {
+h1, h3{
     font-size: var(--fs-md);
     font-weight: var(--fw-semibold);
 }
@@ -183,13 +183,6 @@ h2 {
     font-weight: var(--fw-semibold);
 
     margin: 14.5px 0 14.5px 12px;
-}
-
-/*LETREIRO Título no Figma*/
-h4 {
-    font-family: var(--system-font-alt);
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-bold);
 }
 
 hr {
@@ -226,6 +219,18 @@ hr {
     font-weight: var(--fw-semibold);
 }
 
+/*LETREIRO Título no Figma*/
+.txt-xl{
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+}
+
+.txt-xxl{
+    font-family: var(--system-font-alt);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+}
+
 /*Link (sem o tamanho) no Figma*/
 .txt-link{ 
     color: var(--dark-blue);
@@ -235,6 +240,10 @@ hr {
 .txt-link:hover{
     color: var(--blue);
     text-decoration: underline;
+}
+
+.sub-title {
+    margin: var(--spacing-lg) 0 0 var(--spacing-lg);
 }
 
 .mid-gray{

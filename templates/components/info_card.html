@@ -11,7 +11,7 @@
         {% include 'components/icon.html' with icon=card_icon color=fg_color%}
     {% endif %}
     <div class="info-card-text">
-        <h3>{{ card_title|default:"Untitled" }}</h3>
-        <h4>{{ card_value|default:"None" }}</h4>
+        <p class="txt-xl">{{ card_title|default:"Untitled" }}</p>
+        <p class="txt-xxl">{{ card_value|default:"None" }}</p>
     </div>
 </div>

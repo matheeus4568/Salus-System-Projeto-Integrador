@@ -23,8 +23,8 @@
     <div class="info-display-box">
         <span class="info-display-label txt-sm">{{ label }}</span>
         
-        {% if has_info and info %}
-            <p class="txt-md">{{ info }}</p>
+        {% if has_info %}
+            <p class="txt-md">{{ info|default:'-' }}</p>
         {% endif %}
 
         {% if has_link %}

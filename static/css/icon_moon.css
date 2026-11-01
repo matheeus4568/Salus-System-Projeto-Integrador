@@ -110,7 +110,7 @@
 }
 .icon-circle-triangle-square:before {
   content: "\e915";
-  font-size: 22px;
+  font-size: 25px;
 }
 .icon-pregnancy:before {
   content: "\e916";
@@ -146,7 +146,7 @@
 }
 .icon-medic:before {
   content: "\e91e";
-  font-size: 22px;
+  font-size: 29px;
 }
 .icon-open-eye:before {
   content: "\e91f";
@@ -202,7 +202,7 @@
 }
 .icon-clipboard:before {
   content: "\e92c";
-  font-size: 22px;
+  font-size: 26px;
 }
 .icon-triangle-up-triangle-down:before {
   content: "\e92d";
@@ -218,27 +218,27 @@
 }
 .icon-folder-x:before {
   content: "\e930";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-check:before {
   content: "\e931";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-sparkle:before {
   content: "\e932";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-circle:before {
   content: "\e933";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-arrow-down:before {
   content: "\e934";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folder-arrow-up:before {
   content: "\e935";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-folders:before {
   content: "\e936";

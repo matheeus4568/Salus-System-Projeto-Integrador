@@ -29,14 +29,42 @@
     </div>
     
     <div class="container">
-        <h2>Tablea de Pacientes</h2>
+
+        <div class="flex direction-row justfy-content-space-between">
+            <h2>Container Title</h2>
+            <div class="flex direction-row gap-sm">
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-pencil" button_text="Editar" %}
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="danger" button_icon="icon-trash" button_text="Excluir" %}
+            </div>
+        </div>
+
         <hr>
+
+        <h3 class="sub-title">Container subtitle</h3>
+
         <div class="container-border">
-            {% include "components/info_display.html" with label="Paciente" has_info=True %}
-            {% include "components/info_display.html" with label="Paciente" has_info=True info="Matheus Rodrigues Oliveira" icon="icon-person" %}
-            {% include "components/info_display.html" with label="Paciente" has_info=True info="Matheus Rodrigues Oliveira" picture=True profile_url="placeholders/image.png" %}
-            {% include "components/info_display.html" with label="Documento" has_info=True info="000.000.000-00" has_link=True link_text="Acesse" icon="icon-card" %}
-            {% include "components/info_display.html" with label="Documento" has_link=True link_text="Acesse" info="000.000.000-00" icon="icon-card" %}
+            <div class="flex direction row gap-sm">
+                {% include "components/info_display.html" with label="Info1" has_info=True info="Information 1" icon="icon-person" %}
+                {% include "components/info_display.html" with label="Info2" has_info=True info="Information 2" width="23%" %}
+                {% include "components/info_display.html" with label="Info3" has_info=True info="Info 3" width="15%" %}
+            </div>
+
+            <div class="flex direction row gap-sm">
+                {% include "components/info_display.html" with label="Info8" has_info=True info="Info 4" picture=True profile_url="placeholders/image.png" %}
+                {% include "components/info_display.html" with label="Info4" has_info=True icon="icon-clipboard" icon="icon-circle-triangle-square" %}
+                {% include "components/info_display.html" with label="Info5" has_info=True info="Information 5" icon="icon-medic" %}
+                {% include "components/info_display.html" with label="Info6" has_info=True icon="icon-folder-sparkle" %}
+            </div>
+            
+            {% include "components/info_display.html" with label="Info6" has_info=True icon="icon-magnifying-glass" %}
+
+            <div class="flex direction row gap-sm">
+                {% include "components/info_display.html" with label="Documento1" has_info=True info="000.000.000-00" link_url="#" has_link=True icon="icon-card" %}
+                {% include "components/info_display.html" with label="Documento1" has_info=True info="000.000.000-00" link_url="#" has_link=True icon="icon-card" %}
+                {% include "components/info_display.html" with label="Documento1" has_info=True info="000.000.000-00" has_link=True icon="icon-card" %}
+                {% include "components/info_display.html" with label="Documento2" has_link=True info="000.000.000-00" icon="icon-file" %}
+            </div>
+
         </div>
     </div>
 
