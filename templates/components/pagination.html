@@ -19,10 +19,8 @@
         {% endif %}
 
 
-        <!-- Lógica dos Números e Reticências -->
         {% for num in page_obj.paginator.page_range %}
             
-            <!-- 1. Sempre mostra a Primeira Página -->
             {% if num == 1 %}
                 <li>
                     {% if page_obj.number == num %}
@@ -34,7 +32,6 @@
                     {% endif %}
                 </li>
 
-            <!-- 2. Mostra as páginas vizinhas da atual (janela de 2 para cada lado) -->
             {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
                 <li>
                     {% if page_obj.number == num %}
@@ -61,7 +58,6 @@
         {% endfor %}
 
 
-        <!-- Botão PRÓXIMA -->
         {% if page_obj.has_next %}
             <li>
                 <a href="?page={{ page_obj.next_page_number }}" aria-label="Próxima">
