@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/components/input.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/info_display.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/pagination.css' %}">
 {% endblock %}
 
 {% block aside %}
@@ -90,9 +91,21 @@
             </div>
 
             <div class="container-filter-bottom">
-                <a href="{% url 'teste3' %}" class="txt-link">Ir pra teste3</a>
-                <a href="{% url 'teste2' %}" class="txt-link">Ir pra teste2</a>
-                <a href="{% url 'teste' %}" class="txt-link">Ir pra teste</a>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in page_obj %}
+                            <tr>
+                                <td>{{ item }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% include 'components/pagination.html' with page_obj=page_obj %}
             </div>
         </div>
     </div>
@@ -116,8 +129,15 @@
     </form>
     </div>
 
+    <div class="container">
+        <a href="{% url 'teste3' %}" class="txt-link">Ir pra teste3</a>
+        <a href="{% url 'teste2' %}" class="txt-link">Ir pra teste2</a>
+        <a href="{% url 'teste' %}" class="txt-link">Ir pra teste</a>
+    </div>
+
 {% endblock %}
 
 {% block extra_js %}
 <script src="{% static 'js/components/field.js' %}"></script>
+<script src="{% static 'js/components/pagination.js' %}"></script>
 {% endblock %}

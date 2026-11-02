@@ -1,0 +1,24 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+    width: 100%;
+}
+
+.pagination-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--spacing-sm);
+}
+
+.pagination-list li {
+    display: flex;
+    align-items: end;
+}
+
+.pagination-dots {
+    color: var(--dark-blue);
+    padding-bottom: var(--spacing-sm);
+}

@@ -1,0 +1,77 @@
+<!-- components/pagination.html -->
+{% if page_obj.has_other_pages %}
+<nav aria-label="Navegação de página" class="pagination-container">
+    <ul class="pagination-list">
+        
+        <!-- Botão ANTERIOR -->
+        {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-left" %}
+                </a>
+            </li>
+        {% else %}
+            <li>
+                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-left" disabled=True %}
+            </li>
+        {% endif %}
+
+
+        <!-- Lógica dos Números e Reticências -->
+        {% for num in page_obj.paginator.page_range %}
+            
+            <!-- 1. Sempre mostra a Primeira Página -->
+            {% if num == 1 %}
+                <li>
+                    {% if page_obj.number == num %}
+                        {% include 'components/button.html' with button_size="small" button_hierarchy="primary" button_intent="neutral" button_text=num disabled=True %}
+                    {% else %}
+                        <a href="?page={{ num }}">
+                            {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text=num %}
+                        </a>
+                    {% endif %}
+                </li>
+
+            <!-- 2. Mostra as páginas vizinhas da atual (janela de 2 para cada lado) -->
+            {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+                <li>
+                    {% if page_obj.number == num %}
+                        {% include 'components/button.html' with button_size="small" button_hierarchy="primary" button_intent="neutral" button_text=num disabled=True %}
+                    {% else %}
+                        <a href="?page={{ num }}">
+                            {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text=num %}
+                        </a>
+                    {% endif %}
+                </li>
+
+            {% elif num == page_obj.paginator.num_pages %}
+                <li>
+                    <a href="?page={{ num }}">
+                        {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text=num %}
+                    </a>
+                </li>
+
+            {% elif num == 2 or num == page_obj.paginator.num_pages|add:'-1' %}
+                <li>
+                    <span class="pagination-dots txt-md">...</span>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+
+        <!-- Botão PRÓXIMA -->
+        {% if page_obj.has_next %}
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}" aria-label="Próxima">
+                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-rigth" %}
+                </a>
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-rigth" disabled=True %}
+            </li>
+        {% endif %}
+
+    </ul>
+</nav>
+{% endif %}

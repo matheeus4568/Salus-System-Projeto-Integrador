@@ -7,7 +7,7 @@
 <!-- disabled: se o botão está desativado (True ou nada) -->
 <!-- properties: propriedades adicionais do botão (ex: onclick, type, etc.) -->
 
-<button class="button {{ button_size|default:'big' }} {{ button_hierarchy|default:'primary' }}-{{ button_intent|default:'neutal' }}" {% if disabled %}disabled{% endif %} {{ properties }}>
+<button class="button {{ button_size|default:'big' }} {{ button_hierarchy|default:'primary' }}-{{ button_intent|default:'neutal' }}" {% if disabled %}disabled{% endif %} {{ properties|safe }}>
 
     {% if button_icon %}
 
@@ -17,7 +17,7 @@
         {% elif button_hierarchy == "secondary" %}
 
             {% if button_intent == "neutral" %}
-                {% include 'components/icon.html' with icon=button_icon color='var(--mid-gray)' %}
+                {% include 'components/icon.html' with icon=button_icon color='var(--dark-blue)' %}
             {% elif button_intent == "danger" %}
                 {% include 'components/icon.html' with icon=button_icon color='var(--red)' %}
             {% endif %}
