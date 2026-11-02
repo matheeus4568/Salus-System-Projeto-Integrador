@@ -28,7 +28,15 @@
         <div class="flex direction-row gap-sm">
             {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-printer" button_text="Imprimir" %}
             {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-pencil" button_text="Editar" %}
-            {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="danger" button_icon="icon-trash" button_text="Excluir" %}
+            <form 
+                method="POST" 
+                action="{% url 'pacienteDeletar' paciente.id %}"
+                onsubmit="return confirm('Tem certeza que deseja excluir este paciente?');"
+            >
+                {% csrf_token %}
+
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="danger" button_icon="icon-trash" button_text="Excluir" properties='button_type="submit"' %}
+            </form>
         </div>
     </div>
     <hr>

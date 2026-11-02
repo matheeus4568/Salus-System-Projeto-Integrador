@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from .models import Secretaria, Paciente, Requisicao
 # Create your views here.
 
@@ -27,6 +28,18 @@ def requisicaoLista(request):
 def requisicaoDetalhes(request, requisicaoId):
     requisicao = Requisicao.objects.get(id=requisicaoId)
     return render(request, 'RequisicoesPacientes/requisicao.html', {'requisicao': requisicao})
+
+def requisicaoDeletar(request, requisicaoId):
+    requisicao = get_object_or_404(Requisicao, id=requisicaoId)
+
+    if request.method == 'POST':
+        requisicao.delete()
+
+        messages.success(request, 'Requisição excluída com sucesso!')
+
+        return redirect('requisicoes')
+
+    return redirect('requisicao', id=requisicaoId)
 
 def pacienteLista(request):
     pacientes = Paciente.objects.all()
@@ -67,3 +80,14 @@ def pacienteDetalhes(request, pacienteId):
     }
     return render(request, 'RequisicoesPacientes/paciente.html', context)
 
+def pacienteDeletar(request, pacienteId):
+    paciente = get_object_or_404(Paciente, id=pacienteId)
+
+    if request.method == 'POST':
+        paciente.delete()
+
+        messages.success(request, 'Paciente excluído com sucesso!')
+
+        return redirect('pacientes')
+
+    return redirect('paciente', id=pacienteId)
