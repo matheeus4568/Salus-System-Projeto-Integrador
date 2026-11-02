@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="badge status {{ status|lower }}-bg {{ status|lower }}-fg">
+    {% if status == "pendente" %}
+    {% include 'components/icon.html' with icon="icon-circle" color='var(--pendente-fg)' %}
+    {% elif status == "marcada" %}
+    {% include 'components/icon.html' with icon="icon-sparkle" color='var(--marcada-fg)' %}
+    {% elif status == "encerrada" %}
+    {% include 'components/icon.html' with icon="icon-check" color='var(--encerrada-fg)' %}
+    {% elif status == "cancelada" %}
+    {% include 'components/icon.html' with icon="icon-x" color='var(--cancelada-fg)' %}
+    {% endif %}
+    {{ status }}
+</div>

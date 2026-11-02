@@ -4,12 +4,12 @@
 <tbody>
     {% for item in list_items %}
         <tr>
-            <td style="width: 20%;" >{{ item.data_recebimento }}</td>
+            <td style="width: 20%;" >{{ item.data_recebimento|date:"d/m/Y" }}</td>
             <td style="width: 20%;">{{ item.paciente }}</td>
             <td style="width: 20%;">{{ item.procedimento }}</td>
-            <td style="width: 10%;">{{ item.especificidades }}</td>
-            <td style="width: 10%;" >{{ item.prioridade }}</td>
-            <td style="width: 10%;" >{{ item.status }}</td>
+            <td style="width: 10%;">{% include 'components/especificidade_viewer.html' with paciente=item.paciente %}</td>
+            <td style="width: 10%;" >{% include "components/badges/priority_badge.html" with prioridade=item.prioridade %}</td>
+            <td style="width: 10%;" >{% include "components/badges/status_badge.html" with status=item.status %}</td>
             <td style="width: 10%;" >
                 {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
             </td>

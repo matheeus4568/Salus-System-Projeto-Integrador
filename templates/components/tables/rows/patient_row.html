@@ -5,7 +5,7 @@
     {% for item in list_items %}
         <tr>
             <td style="width: 35%;" >{{ item.nome }}</td>
-            <td style="width: 10%;" >{{ item.especificidades }}</td>
+            <td style="width: 10%;">{% include 'components/especificidade_viewer.html' with paciente=item %}</td>
             <td style="width: 35%;" >{{ item.cartaoSus }}</td>
             <td style="width: 10%;" >mais</td>
             <td  style="width: 10%;" >
