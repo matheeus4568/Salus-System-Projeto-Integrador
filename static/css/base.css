@@ -168,10 +168,6 @@ button {
     --fw-medium:  500; /*medium no figma*/
     --fw-semibold:600; /*semibold no figma*/
     --fw-bold:    700; /*bold no figma*/
-
-    /* Ícones */
-    --chevron-down-icon: url("{% static 'icons/seu-chevron.svg' %}");
-    --calendar-icon: url("{% static 'icons/seu-calendario.svg' %}");
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
