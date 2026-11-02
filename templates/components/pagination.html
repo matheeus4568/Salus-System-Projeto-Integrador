@@ -9,12 +9,12 @@
         {% if page_obj.has_previous %}
             <li>
                 <a href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
-                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-left" %}
+                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-chevron-left" %}
                 </a>
             </li>
         {% else %}
             <li>
-                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-left" disabled=True %}
+                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-chevron-left" disabled=True %}
             </li>
         {% endif %}
 
@@ -65,12 +65,12 @@
         {% if page_obj.has_next %}
             <li>
                 <a href="?page={{ page_obj.next_page_number }}" aria-label="Próxima">
-                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-rigth" %}
+                    {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-chevron-right" %}
                 </a>
             </li>
         {% else %}
             <li class="page-item disabled">
-                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-two-chevron-rigth" disabled=True %}
+                {% include 'components/button.html' with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-chevron-right" disabled=True %}
             </li>
         {% endif %}
 

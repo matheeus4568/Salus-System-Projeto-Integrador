@@ -33,7 +33,7 @@
   content: "\e94e";
   font-size: 22px;
 }
-.icon-two-chevron-rigth:before {
+.icon-two-chevron-right:before {
   content: "\e901";
   font-size: 15px;
 }
@@ -270,11 +270,11 @@
 }
 .icon-chevron-right:before {
   content: "\e93c";
-  font-size: 10px;
+  font-size: 15px;
 }
 .icon-chevron-left:before {
   content: "\e93d";
-  font-size: 10px;
+  font-size: 15px;
 }
 .icon-wave:before {
   content: "\e93e";
