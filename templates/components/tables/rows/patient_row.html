@@ -9,7 +9,9 @@
             <td style="width: 35%;" >{{ item.cartaoSus }}</td>
             <td style="width: 10%;" >mais</td>
             <td  style="width: 10%;" >
-                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
+                 <a href="{% url 'paciente' item.id %}">
+                    {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
+                 </a>
             </td>
         </tr>
     {% endfor %}

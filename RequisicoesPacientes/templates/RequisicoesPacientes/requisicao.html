@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% load text_filters %}
+{% block title %}Requisições{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/badges.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/field.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/info_display.css' %}">
+{% endblock %}
+
+{% block aside %}
+{% include "components/navbar.html" with perfil=True %}
+{% endblock %}
+
+{% block header %}
+{% include "components/header.html" with page_title="Detalhes requisição" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+
+{% block main %}
+<div class="container direction-column">
+    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex: 1;">
+        <h2>Requisição</h2>
+        <div class="flex direction-row gap-sm">
+            {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-printer" button_text="Imprimir" %}
+            {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-pencil" button_text="Editar" %}
+            {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="danger" button_icon="icon-trash" button_text="Excluir" %}
+        </div>
+    </div>
+    <hr>
+    <h3 class="sub-title">Dados do paciente</h3>
+    <div class="container-border">
+        <div class="flex direction row gap-sm">
+            {% include "components/info_display.html" with label="Nome" has_info=True info=requisicao.paciente.nome icon="icon-person" %}
+            {% include "components/info_display.html" with label="Sexo" has_info=True info=requisicao.paciente.sexo width="23%" %}
+            {% include "components/info_display.html" with label="Idade" has_info=True info=requisicao.paciente.idade width="15%" %}
+        </div>
+
+        <div class="flex direction row gap-sm">
+            {% include "components/info_display.html" with label="Deficiência(s)" has_info=True info=requisicao.paciente.deficiencias|list_to_natural icon="icon-wheelchair-user" %}
+            {% include "components/info_display.html" with label="Alergia(s)" has_info=True info=requisicao.paciente.alergias|list_to_natural icon="icon-alergic-hand" %}
+            {% include "components/info_display.html" with label="Gestante" has_info=True info=requisicao.paciente.gestante|yesno:"Sim,Não" icon="icon-pregnancy" %}
+            {% include "components/info_display.html" with label="Oncológico" has_info=True info=requisicao.paciente.oncologico|yesno:"Sim,Não" icon="icon-ribbon" %}
+            {% include "components/info_display.html" with label="Idoso" has_info=True info=requisicao.paciente.idoso|yesno:"Sim,Não" icon="icon-sixty-plus" %}
+        </div>
+            
+        {% include "components/info_display.html" with label="Observações" has_info=True info=requisicao.paciente.observacoes icon="icon-magnifying-glass" %}
+    </div>
+    
+    <h3 class="sub-title">Dados da requisição</h3>
+    <div class="container-border">
+        <div class="flex direction row gap-sm" >
+            {% include "components/info_display.html" with label="CID" has_info=True info=requisicao.cid icon="icon-folder" %}
+            {% include "components/info_display.html" with label="Status" has_info=True info=requisicao.status icon="icon-wave" %}
+            {% include "components/info_display.html" with label="Prioridade" has_info=True info=requisicao.prioridade icon="icon-triangle-up-triangle-down" %}
+        </div>
+        <div class="flex direction row gap-sm" >
+            {% include "components/info_display.html" with label="Data de expedição" has_info=True info=requisicao.data_expedicao icon="icon-folder-arrow-up" %}
+            {% include "components/info_display.html" with label="Data de recebimento" has_info=True info=requisicao.data_recebimento icon="icon-folder-arrow-down" %}
+            {% include "components/info_display.html" with label="Marcada para" has_info=True info=requisicao.data_marcada icon="icon-folder-sparkle" %}
+        </div>
+        <div class="flex direction row gap-sm" >
+            {% include "components/info_display.html" with label="Profissional solicitante" has_info=True info=requisicao.profissional_solicitante icon="icon-medic" %}
+            {% include "components/info_display.html" with label="Unidade solicitante" has_info=True info=requisicao.unidade_solicitante icon="icon-secretary" %}
+        </div>
+        <div class="flex direction row gap-sm" >
+            {% include "components/info_display.html" with label="Procedimento" has_info=True info=requisicao.procedimento icon="icon-circle-triangle-square" %}
+            {% include "components/info_display.html" with label="Papel da requisição" has_info=True info=requisicao.documentos icon="icon-file" width="20%" %}
+        </div>
+        {% include "components/info_display.html" with label="Observações" has_info=True info=requisicao.observacoes icon="icon-magnifying-glass" %}
+
+    </div>
+    {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-open-eye" button_text="Ver histórico de alterações" properties="style='align-self: flex-end;'" %}
+
+</div>
+{% endblock %}
