@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import requisicaoLista, requisicao_detalhes, pacienteLista, paciente_detalhes
+from .views import requisicaoLista, requisicaoDetalhes, pacienteLista, pacienteDetalhes
 
 
 urlpatterns = [
     path('requisicoes/', requisicaoLista, name='requisicoes'),
-    path('requisicoes/<int:requisicaoId>/', requisicao_detalhes, name='requisicao'),
+    path('requisicoes/<int:requisicaoId>/', requisicaoDetalhes, name='requisicao'),
     path('pacientes/', pacienteLista, name='pacientes'),
-    path('pacientes/<int:pacienteId>/', paciente_detalhes, name='paciente')
+    path('pacientes/<int:pacienteId>/', pacienteDetalhes, name='paciente')
 ]

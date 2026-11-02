@@ -40,6 +40,24 @@ class Paciente(models.Model):
     oncologico = models.BooleanField(default=False)
     deficiencias = models.JSONField(blank=True, null=True)
     especificidades = models.JSONField(blank=True, null=True)
+    end_estado = models.CharField(max_length=50, blank=True, null=True)
+    end_municipio = models.CharField(max_length=50, blank=True, null=True)
+    end_bairro = models.CharField(max_length=50, blank=True, null=True)
+    end_rua = models.CharField(max_length=100, blank=True, null=True)
+    end_numero = models.CharField(max_length=10, blank=True, null=True)
+    
+    @property
+    def idade(self):
+        hoje = timezone.localdate()
+        idade = (
+            hoje.year
+            - self.dataNascimento.year
+            - (
+                (hoje.month, hoje.day)
+                < (self.dataNascimento.month, self.dataNascimento.day)
+            )
+        )
+        return idade
 
     @property
     def especificidades_icones(self):
@@ -137,9 +155,11 @@ class Requisicao(models.Model):
     procedimento = models.CharField(max_length=100)
     data_expedicao = models.DateField()
     data_recebimento = models.DateField(auto_now_add=True)
+    data_marcada = models.DateField(blank=True, null=True)
     profissional_solicitante = models.CharField(max_length=100)
     unidade_solicitante = models.CharField(max_length=100)
     observacoes = models.TextField(blank=True)
+    documentos = models.FileField(upload_to="documentos_requisicao/", blank=True, null=True)
 
     def __str__(self):
         return f"Requisição {self.id} - {self.paciente.nome}"

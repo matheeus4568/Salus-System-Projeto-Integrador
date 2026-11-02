@@ -11,7 +11,9 @@
             <td style="width: 10%;" >{% include "components/badges/priority_badge.html" with prioridade=item.prioridade %}</td>
             <td style="width: 10%;" >{% include "components/badges/status_badge.html" with status=item.status %}</td>
             <td style="width: 10%;" >
+                <a href="{% url 'requisicao' item.id %}">
                 {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
+                </a>
             </td>
         </tr>
     {% endfor %}
