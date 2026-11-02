@@ -1,0 +1,57 @@
+.badge {
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--fw-neutral);
+    display: inline-block;
+    text-align: center;
+}
+
+.status {
+    &.pendente-bg {
+        background-color: var(--pendente-bg);
+    }
+    &.pendente-fg {
+        color: var(--pendente-fg);
+    }
+    &.marcada-bg {
+        background-color: var(--marcada-bg);
+    }
+    &.marcada-fg {
+        color: var(--marcada-fg);
+    }
+    &.encerrada-bg {
+        background-color: var(--encerrada-bg);
+    }
+    &.encerrada-fg {
+        color: var(--encerrada-fg);
+    }
+    &.cancelada-bg {
+        background-color: var(--cancelada-bg);
+    }
+    &.cancelada-fg {
+        color: var(--cancelada-fg);
+    }
+}
+
+.priority {
+    &.eletiva-bg {
+        background-color: var(--eletiva-bg);
+    }
+    &.eletiva-fg {
+        color: var(--eletiva-fg);
+    }
+
+    &.urgente-bg {
+        background-color: #F4CACA;
+    }
+    &.urgente-fg {
+        color: #961919;   
+    }
+    &.urgencia-bg {
+        background-color: #F4CACA;
+    }
+    &.urgencia-fg {
+        color: #961919;   
+    }
+}

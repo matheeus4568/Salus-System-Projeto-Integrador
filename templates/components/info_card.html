@@ -6,12 +6,12 @@
 <!-- fg_color: cor do texto do card -->
 <!-- fit_content: se true, define a largura do card como 100% -->
 
-<div class="info-card" style="background-color: {{ bg_color|default:'var(--light-gray)' }}; color: {{ fg_color|default:'var(--black)' }}; {% if fit_content %}width: fit-content;{% endif %}">
+<div class="info-card" style="background-color: {{ bg_color|default:'var(--light-gray)' }}; color: {{ fg_color|default:'var(--black)' }}; {% if fit_content %} width: fit-content;{% endif %}">
     {% if card_icon %}
         {% include 'components/icon.html' with icon=card_icon color=fg_color%}
     {% endif %}
     <div class="info-card-text">
         <p class="txt-xl">{{ card_title|default:"Untitled" }}</p>
-        <p class="txt-xxl">{{ card_value|default:"None" }}</p>
+        <p class="txt-xxl">{{ card_value|default_if_none:"None" }}</p>
     </div>
 </div>

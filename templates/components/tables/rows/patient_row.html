@@ -1,0 +1,16 @@
+{% load static %}
+<!-- VARIAVEIS DO PATIENT_ROW -->
+<!-- list_items: Lista de itens a serem exibidos -->
+<tbody>
+    {% for item in list_items %}
+        <tr>
+            <td style="width: 35%;" >{{ item.nome }}</td>
+            <td style="width: 10%;">{% include 'components/especificidade_viewer.html' with paciente=item %}</td>
+            <td style="width: 35%;" >{{ item.cartaoSus }}</td>
+            <td style="width: 10%;" >mais</td>
+            <td  style="width: 10%;" >
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_text="Detalhes" %}
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>

@@ -1,0 +1,7 @@
+{% load static %}
+
+<div class="specificity-icons">
+    {% for icon in paciente.especificidades_icones %}
+        {% include 'components/icon.html' with icon=icon %}
+    {% endfor %}
+</div>

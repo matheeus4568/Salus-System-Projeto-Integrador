@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .m_views import *
+from RequisicoesPacientes import urls as requisicoes_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,3 +25,6 @@ urlpatterns = [
     path('teste/teste2/', teste, name='teste2'),
     path('teste/teste2/teste3/', teste, name='teste3'),
 ]
+
+
+urlpatterns += requisicoes_urls.urlpatterns
