@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import RequisicaoForm
+
+from RequisicoesPacientes.forms import RequisicaoForm
 from .models import Secretaria, Paciente, Requisicao
 # Create your views here.
 
@@ -49,3 +52,13 @@ def paciente_detalhes(request, pacienteId):
     paciente = Paciente.objects.get(id=pacienteId)
     return render(request, 'paciente.html', {'paciente': paciente})
 
+def formulario_requisicao(request):
+    if request.method == 'POST':
+        form = RequisicaoForm(request.POST)
+        if form.is_valid():
+            dados = form.cleaned_data
+            nome = dados.get('nome')
+            return redirect('nova_requisicao')
+    else:
+        form = RequisicaoForm()
+    return render(request, 'RequisicoesPacientes/requisicao.html', {'form': form})

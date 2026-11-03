@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Requisição{% endblock %}
+{% block extra_css %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição</title>
+    <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
+</head>
+<body>
+    <header>
+        {% include "components/navbar.html" with perfil=True %}
+        {% include "components/header.html" with page_title="Requisição" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+    </header>
+    <main>
+        <div class="container direction-column" style="margin-bottom: 30px;">
+            <h2>Nova Requisição</h2>
+            <hr>
+            <h3 style="margin-top: 15px;">Dados do Paciente</h3>
+            <form method="post" novalidate style="margin-top: 15px;">
+                {% csrf_token %}
+                <div clas="form-row">
+                    <div class="form-group">
+                        {% include "components/field.html" with field=form.nome %}
+                        {% include "components/field.html" with field=form.idade %}
+                        {% include "components/field.html" with field=form.sexo %}
+                        {% include "components/field.html" with field=form.deficiencia %}
+                        {% include "components/field.html" with field=form.alergia %}
+                        {% include "components/field.html" with field=form.gravidez %}
+                        {% include "components/field.html" with field=form.oncologia %}
+                        {% include "components/field.html" with field=form.idoso %}
+                        {% include "components/field.html" with field=form.observacao %}
+                    </div>
+                    <h3 style="margin-top: 20px;">Dados da Requisição</h3>
+                    <div class="form-group">
+                        {% include "components/field.html" with field=form.cid %}
+                        {% include "components/field.html" with field=form.status %}
+                        {% include "components/field.html" with field=form.prioridade %}
+                        {% include "components/field.html" with field=form.data_expedicao %}
+                        {% include "components/field.html" with field=form.data_recebimento %}
+                        {% include "components/field.html" with field=form.marcada_para %}
+                        {% include "components/field.html" with field=form.profissional_solicitante %}
+                        {% include "components/field.html" with field=form.cnis %}
+                        {% include "components/field.html" with field=form.cbo %}
+                        {% include "components/field.html" with field=form.unidade_saude_solicitante %}
+                        {% include "components/field.html" with field=form.cnes %}
+                        {% include "components/field.html" with field=form.indicacao_clinica %}
+                        {% include "components/field.html" with field=form.procedimento %}
+                        {% include "components/field.html" with field=form.sigtap %}
+                        {% include "components/field.html" with field=form.observacao %}
+                        {% include "components/field.html" with field=form.papel_requisicao %}
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
+{% endblock %}

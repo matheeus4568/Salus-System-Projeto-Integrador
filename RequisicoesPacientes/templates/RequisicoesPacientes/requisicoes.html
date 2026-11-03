@@ -21,7 +21,6 @@
 {% block main %}
 <div class="container direction-row">
 
-
     {% include "components/info_card.html" with card_icon="icon-folder" card_title="Requisições Totais" card_value=requisicoes_totais %}
 
     {% include "components/info_card.html" with card_icon="icon-circle" bg_color='var(--pendente-bg)' fg_color='var(--pendente-fg)' card_title="Pendentes"  card_value=requisicoes_pendentes %}
@@ -35,14 +34,18 @@
     
 </div>
 <div class="container direction-column" >
-    <h2>Tablea de Requisições</h2>
-        <hr>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 10px; margin-right: 25px;">
+        <h2 style="margin: 2px;">Tabela de Requisições</h2> 
+        <a href="{% url '/requisicao/}">
+        {% include "components/button.html" with button_size="small" button_hierarchy="primary" button_intent="neutral" button_icon="icon-folder-plus" button_text="Nova Requisição" %}
+        </a>
+    </div>
+    <hr>
     <div>
 
         <div class="container-filter-top">
         </div>
-        <div class="container-filter-bottom" >
-            
+        <div class="container-filter-bottom" >      
             {% include "components/tables/requisition_table.html" with list_columns=lista_colunas list_items=requisicoes %}
         </div>
     </div>
