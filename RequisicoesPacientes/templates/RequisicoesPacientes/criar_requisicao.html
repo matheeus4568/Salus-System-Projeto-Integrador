@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Criação de Requisição{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/field.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+<link rel="stylesheet" href="{% static 'RequisicoesPacientes/css/forms.css' %}">
+
+{% endblock %}
+
+{% block aside %}
+{% include "components/navbar.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "components/header.html" with page_title="Criação de Requisição" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+{% block main %}
+
+<div class="form-wrapper">
+    <div class="container direction-column">
+        <h2>Criar Requisição</h2>
+
+        <hr>
+
+        <form action="{% url 'requisicaoCriar' %}" method="POST" enctype="multipart/form-data" class="flex direction-column gap-md">
+            {% csrf_token %}
+            
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Paciente</h3>
+            </div>
+
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.paciente %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Requisição</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.cid %}
+                {% include 'components/field.html' with field=form.prioridade %}
+                {% include 'components/field.html' with field=form.procedimento %}
+                {% include 'components/field.html' with field=form.data_expedicao %}
+                {% include 'components/field.html' with field=form.documentos %}
+                {% include 'components/field.html' with field=form.observacoes %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Profissional/Unidade solicitante</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.profissional_solicitante %}
+                {% include 'components/field.html' with field=form.unidade_solicitante %}
+            </div>
+
+            <div class="buttons-container flex direction-row gap-md">
+                {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" properties='type="submit"' button_text='Criar Requisição' %}
+                <a href="{% url 'requisicoes' %}" class="button big secondary-neutral">
+                    Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/components/field.js' %}"></script>
+{% endblock %}

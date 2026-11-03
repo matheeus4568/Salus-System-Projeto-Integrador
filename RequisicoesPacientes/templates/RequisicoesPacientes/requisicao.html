@@ -78,7 +78,11 @@
         </div>
         <div class="flex direction row gap-sm" >
             {% include "components/info_display.html" with label="Procedimento" has_info=True info=requisicao.procedimento icon="icon-circle-triangle-square" %}
-            {% include "components/info_display.html" with label="Papel da requisição" has_link=True link_url=requisicao.documentos.url icon="icon-file" width="30%" %}
+            {% if requisicao.documentos %}
+                {% include "components/info_display.html" with label="Papel da requisição" has_link=True link_url=requisicao.documentos.url link_text="Visualizar Documento" icon="icon-file" width="30%" %}
+            {% else %}
+                {% include "components/info_display.html" with label="Papel da requisição" has_link=True icon="icon-file" width="30%" %}
+            {% endif %}
         </div>
         {% include "components/info_display.html" with label="Observações" has_info=True info=requisicao.observacoes icon="icon-magnifying-glass" %}
 

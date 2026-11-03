@@ -81,7 +81,11 @@
             {% include "components/info_display.html" with label="CPF" has_info=True info=paciente.cpf icon="icon-card" %}
             {% include "components/info_display.html" with label="RG" has_info=True info=paciente.rg icon="icon-card" %}
             {% include "components/info_display.html" with label="Cartão SUS" has_info=True info=paciente.cartaoSus icon="icon-card" %}
-            {% include "components/info_display.html" with label="Comprovante de Residência" has_link=True link_url=paciente.comprovanteResidencia.url icon="icon-file" %}
+            {% if paciente.comprovanteResidencia %}
+                {% include "components/info_display.html" with label="Comprovante de Residência" has_link=True link_url=paciente.comprovanteResidencia.url icon="icon-file" %}
+            {% else %}
+                {% include "components/info_display.html" with label="Comprovante de Residência" has_link=True icon="icon-file" %}
+            {% endif %}
 
         </div>   
         

@@ -150,7 +150,7 @@ class Requisicao(models.Model):
         Paciente, on_delete=models.CASCADE, related_name="requisicoes"
     )
     cid = models.CharField(max_length=10)
-    prioridade = models.CharField(max_length=10, choices=CHOICES_PRIORIDADE)
+    prioridade = models.CharField(max_length=10, choices=CHOICES_PRIORIDADE, default='eletiva')
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default='pendente')
     procedimento = models.CharField(max_length=100)
     data_expedicao = models.DateField()

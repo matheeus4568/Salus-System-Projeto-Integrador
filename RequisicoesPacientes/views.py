@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Secretaria, Paciente, Requisicao
-from .forms import PacienteForm, RequisicaoUpdateForm
+from .forms import PacienteForm, RequisicaoUpdateForm, RequisicaoCreateForm
 # Create your views here.
 
 
@@ -49,14 +49,14 @@ def requisicaoEditar(request, requisicaoId):
 
 def requisicaoCriar(request):
     if request.method == 'POST':
-        form = RequisicaoUpdateForm(request.POST, request.FILES)
+        form = RequisicaoCreateForm(request.POST, request.FILES)
         
         if form.is_valid():
             form.save()
 
             return redirect('requisicoes')
     else:
-        form = RequisicaoUpdateForm()
+        form = RequisicaoCreateForm()
 
     return render(request, 'RequisicoesPacientes/criar_requisicao.html', {
         'form': form,
