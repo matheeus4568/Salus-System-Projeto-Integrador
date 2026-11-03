@@ -47,11 +47,11 @@
 }
 .icon-sixty-plus:before {
   content: "\e904";
-  font-size: 22px;
+  font-size: 25px;
 }
 .icon-alergic-hand:before {
   content: "\e905";
-  font-size: 22px;
+  font-size: 26px;
 }
 .icon-attention:before {
   content: "\e906";
@@ -90,7 +90,7 @@
 }
 .icon-wheelchair-user:before {
   content: "\e90f";
-  font-size: 22px;
+  font-size: 26px;
 }
 .icon-recent-x:before {
   content: "\e910";
@@ -118,7 +118,7 @@
 }
 .icon-pregnancy:before {
   content: "\e916";
-  font-size: 22px;
+  font-size: 26px;
 }
 .icon-printer:before {
   content: "\e917";
@@ -154,7 +154,7 @@
 }
 .icon-open-eye:before {
   content: "\e91f";
-  font-size: 22px;
+  font-size: 16px;
 }
 .icon-closed-eye:before {
   content: "\e920";
@@ -162,7 +162,7 @@
 }
 .icon-ribbon:before {
   content: "\e921";
-  font-size: 22px;
+  font-size: 23px;
 }
 .icon-person:before {
   content: "\e922";
@@ -210,11 +210,11 @@
 }
 .icon-triangle-up-triangle-down:before {
   content: "\e92d";
-  font-size: 22px;
+  font-size: 21px;
 }
 .icon-folder:before {
   content: "\e92e";
-  font-size: 22px;
+  font-size: 18px;
 }
 .icon-folder-plus:before {
   content: "\e92f";
@@ -238,11 +238,11 @@
 }
 .icon-folder-arrow-down:before {
   content: "\e934";
-  font-size: 19px;
+  font-size: 21px;
 }
 .icon-folder-arrow-up:before {
   content: "\e935";
-  font-size: 19px;
+  font-size: 21px;
 }
 .icon-folders:before {
   content: "\e936";
@@ -254,7 +254,7 @@
 }
 .icon-secretary:before {
   content: "\e938";
-  font-size: 22px;
+  font-size: 23px;
 }
 .icon-secretary-solid:before {
   content: "\e939";
@@ -278,7 +278,7 @@
 }
 .icon-wave:before {
   content: "\e93e";
-  font-size: 22px;
+  font-size: 14px;
 }
 .icon-square-solid:before {
   content: "\e93f";

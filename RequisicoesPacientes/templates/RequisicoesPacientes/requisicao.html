@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load text_filters %}
-{% block title %}Requisições{% endblock %}
+{% block title %}Requisição{% endblock %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
@@ -76,7 +76,7 @@
         </div>
         <div class="flex direction row gap-sm" >
             {% include "components/info_display.html" with label="Procedimento" has_info=True info=requisicao.procedimento icon="icon-circle-triangle-square" %}
-            {% include "components/info_display.html" with label="Papel da requisição" has_info=True info=requisicao.documentos icon="icon-file" width="20%" %}
+            {% include "components/info_display.html" with label="Papel da requisição" has_link=True link_url=requisicao.documentos.url icon="icon-file" width="30%" %}
         </div>
         {% include "components/info_display.html" with label="Observações" has_info=True info=requisicao.observacoes icon="icon-magnifying-glass" %}
 
