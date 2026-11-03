@@ -4,9 +4,9 @@
 <!-- card_value: valor do card -->
 <!-- bg_color: cor de fundo do card -->
 <!-- fg_color: cor do texto do card -->
-<!-- fit_content: se true, define a largura do card como 100% -->
+<!-- width: largura do card -->
 
-<div class="info-card" style="background-color: {{ bg_color|default:'var(--light-gray)' }}; color: {{ fg_color|default:'var(--black)' }}; {% if fit_content %} width: fit-content;{% endif %}">
+<div class="info-card" style="background-color: {{ bg_color|default:'var(--light-gray)' }}; color: {{ fg_color|default:'var(--black)' }}; width: {{ width }};">
     {% if card_icon %}
         {% include 'components/icon.html' with icon=card_icon color=fg_color%}
     {% endif %}

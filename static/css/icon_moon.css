@@ -71,6 +71,7 @@
 }
 .icon-house:before {
   content: "\e90a";
+  font-size: 20px;
 }
 .icon-cellphone:before {
   content: "\e90b";
@@ -102,7 +103,7 @@
 }
 .icon-mail:before {
   content: "\e912";
-  font-size: 22px;
+  font-size: 19px;
 }
 .icon-check:before {
   content: "\e913";
@@ -118,7 +119,7 @@
 }
 .icon-pregnancy:before {
   content: "\e916";
-  font-size: 26px;
+  font-size: 27px;
 }
 .icon-printer:before {
   content: "\e917";
@@ -194,7 +195,7 @@
 }
 .icon-circle:before {
   content: "\e929";
-  font-size: 10px;
+  font-size: 8px;
 }
 .icon-profile:before {
   content: "\e92a";

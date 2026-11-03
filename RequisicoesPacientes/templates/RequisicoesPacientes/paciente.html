@@ -51,8 +51,8 @@
 
         <div class="flex direction row gap-sm">
             {% include "components/info_display.html" with label="Nome da mãe" has_info=True info=paciente.nomeMae  icon="icon-pregnancy" %}
-            {% include "components/info_display.html" with label="Municipio de nascimento" has_info=True info=paciente.municipioNascimento width="25%" icon="icon-secretary" %}
-            {% include "components/info_display.html" with label="Data de nascimento" has_info=True info=paciente.dataNascimento|date:"d/m/Y" width="25%" icon="icon-calendar" %}
+            {% include "components/info_display.html" with label="Municipio de nascimento" has_info=True info=paciente.municipioNascimento icon="icon-secretary" %}
+            {% include "components/info_display.html" with label="Data de nascimento" has_info=True info=paciente.dataNascimento|date:"d/m/Y" icon="icon-calendar" %}
         </div>
 
         <div class="flex direction row gap-sm">
@@ -64,7 +64,7 @@
             {% include "components/info_display.html" with label="Cidade" has_info=True info=paciente.end_municipio icon="icon-house" %}
             {% include "components/info_display.html" with label="Rua" has_info=True info=paciente.end_rua %}
             {% include "components/info_display.html" with label="Bairro" has_info=True info=paciente.end_bairro %}
-            {% include "components/info_display.html" with label="Número" has_info=True info=paciente.end_numero width="20%" %}
+            {% include "components/info_display.html" with label="Número" has_info=True info=paciente.end_numero width="30%" %}
         </div>
 
         <div class="flex direction row gap-sm">
@@ -79,6 +79,7 @@
             {% include "components/info_display.html" with label="CPF" has_info=True info=paciente.cpf icon="icon-card" %}
             {% include "components/info_display.html" with label="RG" has_info=True info=paciente.rg icon="icon-card" %}
             {% include "components/info_display.html" with label="Cartão SUS" has_info=True info=paciente.cartaoSus icon="icon-card" %}
+            {% include "components/info_display.html" with label="Comprovante de Residência" has_link=True link_url=paciente.comprovanteResidencia.url icon="icon-file" %}
 
         </div>   
         

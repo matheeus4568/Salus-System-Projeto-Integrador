@@ -1,8 +1,8 @@
 .badge {
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--font-size-sm);
-    font-weight: var(--fw-neutral);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
     display: inline-block;
     text-align: center;
 }
