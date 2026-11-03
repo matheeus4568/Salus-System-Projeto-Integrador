@@ -1,9 +1,13 @@
 # meu_app/forms.py
 from django import forms
 from .models import Paciente, Requisicao
-
+import json
 
 class PacienteForm(forms.ModelForm):
+    deficiencias = forms.CharField(
+        required=False,
+        widget=forms.HiddenInput()
+    )
     class Meta:
         model = Paciente
         fields = [
@@ -41,7 +45,7 @@ class PacienteForm(forms.ModelForm):
             'gestante': forms.CheckboxInput(),
             'oncologico': forms.CheckboxInput(),
             
-            'deficiencias': forms.Textarea(attrs={'rows': 2, 'placeholder': 'Lista de deficiências (JSON)'}),
+            #'deficiencias': forms.Textarea(attrs={'rows': 2, 'placeholder': 'Lista de deficiências (JSON)'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -49,6 +53,42 @@ class PacienteForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             if field.required:
                 field.widget.attrs['class'] = field.widget.attrs.get('class', '') + ' required-field'
+                
+        # Carrega as deficiências existentes ao editar um paciente
+        if self.instance and self.instance.pk:
+            self.initial['deficiencias'] = json.dumps(
+                self.instance.deficiencias or []
+            )
+            
+    def clean_deficiencias(self):
+        valor = self.cleaned_data.get('deficiencias') or '[]'
+
+        try:
+            dados = json.loads(valor)
+        except (json.JSONDecodeError, TypeError):
+            raise forms.ValidationError("Formato de deficiências inválido.")
+
+        if not isinstance(dados, list):
+            raise forms.ValidationError("As deficiências devem ser uma lista.")
+
+        if not all(isinstance(item, str) and item.strip() for item in dados):
+            raise forms.ValidationError(
+                "Todas as deficiências devem ser textos válidos."
+            )
+
+        # Remove espaços extras e duplicatas, ignorando diferenças de maiúsculas.
+        resultado = []
+        valores_normalizados = set()
+
+        for item in dados:
+            item = item.strip()
+            normalizado = item.casefold()
+
+            if normalizado not in valores_normalizados:
+                resultado.append(item)
+                valores_normalizados.add(normalizado)
+
+        return resultado
 
     def clean_cpf(self):
         cpf = self.cleaned_data.get('cpf')

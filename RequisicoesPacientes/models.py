@@ -38,7 +38,7 @@ class Paciente(models.Model):
     gestante = models.BooleanField(default=False)
     alergias = models.TextField(blank=True)
     oncologico = models.BooleanField(default=False)
-    deficiencias = models.JSONField(blank=True, null=True)
+    deficiencias = models.JSONField(default=list, blank=True)
     especificidades = models.JSONField(blank=True, null=True)
     end_estado = models.CharField(max_length=50, blank=True, null=True)
     end_municipio = models.CharField(max_length=50, blank=True, null=True)

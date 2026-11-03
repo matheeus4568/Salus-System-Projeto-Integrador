@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# files que são guardados no db
+/comprovantes_residencia
+/documentos_requisicao

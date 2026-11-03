@@ -1,0 +1,41 @@
+<div class="field-wrapper tags-field-wrapper">
+    <label class="field-label txt-md" for="{{ field.id_for_label }}">
+        {{ field.label }}
+    </label>
+
+    <div class="field-container tags-input-container">
+        <div class="tags-list" id="{{ field.id_for_label }}-tags">
+            {% if field.value %}
+                {% for tag in field.value %}
+                    <span class="tag-item">
+                        {{ tag }}
+                        <button type="button" class="tag-remove" aria-label="Remover {{ tag }}">×</button>
+                    </span>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <input
+            type="text"
+            class="tags-text-input"
+            id="{{ field.id_for_label }}-input"
+            placeholder="{{ placeholder|default:'Digite e pressione Enter...' }}"
+            autocomplete="off"
+        >
+
+        <input
+            type="hidden"
+            name="{{ field.html_name }}"
+            id="{{ field.id_for_label }}"
+            value="{{ field.value|default:'[]' }}"
+        >
+    </div>
+
+    {% if help_text %}
+        <span class="field-help txt-sm">{{ help_text }}</span>
+    {% endif %}
+
+    {% if field.errors %}
+        <span class="field-error txt-sm">{{ field.errors.0 }}</span>
+    {% endif %}
+</div>
