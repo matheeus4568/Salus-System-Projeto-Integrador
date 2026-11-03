@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{% static 'css/components/info_card.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/table.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/field.css' %}">
 
 {% endblock %}
 
@@ -37,10 +38,24 @@
     <div>
 
         <div class="container-filter-top">
+            <div
+            class="field-wrapper"
+            >
+            
+                <input 
+                class="field-container
+                type="text" 
+                id="searchInput" 
+                placeholder="Pesquisar por paciente..."
+                >
+            </div>
         </div>
         <div class="container-filter-bottom" >
             {% include "components/tables/patient_table.html" with list_columns=lista_colunas list_items=pacientes %}
         </div>
     </div>
     </div>
+{% endblock %}
+{% block extra_js %}
+    <script src="{% static 'js/filters.js' %}"></script>
 {% endblock %}
