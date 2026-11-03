@@ -31,7 +31,7 @@ def breadcrumbs(request):
 
         breadcrumbs.append({
             'title': titulo,
-            'url': None if is_id else url_acumulada 
+            'url': url_acumulada 
         })
         
     if breadcrumbs:

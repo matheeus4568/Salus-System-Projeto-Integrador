@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Secretaria, Paciente, Requisicao
+from .forms import PacienteForm, RequisicaoUpdateForm
 # Create your views here.
 
 
@@ -25,9 +26,27 @@ def requisicaoLista(request):
     }
     return render(request, 'RequisicoesPacientes/requisicoes.html', context)
 
+
 def requisicaoDetalhes(request, requisicaoId):
     requisicao = Requisicao.objects.get(id=requisicaoId)
     return render(request, 'RequisicoesPacientes/requisicao.html', {'requisicao': requisicao})
+
+def requisicaoEditar(request, requisicaoId):
+    requisicao = get_object_or_404(Requisicao, id=requisicaoId)
+
+    if request.method == 'POST':
+        form = RequisicaoUpdateForm(request.POST, request.FILES, instance=requisicao)
+        if form.is_valid():
+            form.save() 
+            return redirect('requisicao', requisicaoId=requisicaoId)
+    else:
+        form = RequisicaoUpdateForm(instance=requisicao)
+
+    return render(request, 'RequisicoesPacientes/editar_requisicao.html', {
+        'requisicao': requisicao,
+        'form': form,
+    })
+
 
 def requisicaoDeletar(request, requisicaoId):
     requisicao = get_object_or_404(Requisicao, id=requisicaoId)
@@ -40,6 +59,7 @@ def requisicaoDeletar(request, requisicaoId):
         return redirect('requisicoes')
 
     return redirect('requisicao', id=requisicaoId)
+
 
 def pacienteLista(request):
     pacientes = Paciente.objects.all()
@@ -57,6 +77,7 @@ def pacienteLista(request):
     }
     
     return render(request, 'RequisicoesPacientes/pacientes.html', context)
+
 
 def pacienteDetalhes(request, pacienteId):
     paciente = Paciente.objects.get(id=pacienteId)
@@ -79,6 +100,27 @@ def pacienteDetalhes(request, pacienteId):
         'lista_colunas': lista_colunas,
     }
     return render(request, 'RequisicoesPacientes/paciente.html', context)
+
+
+
+def pacienteEditar(request, pacienteId):
+    paciente = get_object_or_404(Paciente, id=pacienteId)
+
+    if request.method == 'POST':
+        form = PacienteForm(request.POST, instance=paciente)
+        
+        if form.is_valid():
+            form.save() 
+
+            return redirect('paciente', id=pacienteId)
+    else:
+        form = PacienteForm(instance=paciente)
+
+    return render(request, 'RequisicoesPacientes/editar_paciente.html', {
+        'paciente': paciente,
+        'form': form,
+    })
+
 
 def pacienteDeletar(request, pacienteId):
     paciente = get_object_or_404(Paciente, id=pacienteId)

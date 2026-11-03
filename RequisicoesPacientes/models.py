@@ -151,7 +151,7 @@ class Requisicao(models.Model):
     )
     cid = models.CharField(max_length=10)
     prioridade = models.CharField(max_length=10, choices=CHOICES_PRIORIDADE)
-    status = models.CharField(max_length=10, choices=CHOICES_STATUS)
+    status = models.CharField(max_length=10, choices=CHOICES_STATUS, default='pendente')
     procedimento = models.CharField(max_length=100)
     data_expedicao = models.DateField()
     data_recebimento = models.DateField(auto_now_add=True)

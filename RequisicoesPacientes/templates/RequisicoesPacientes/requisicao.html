@@ -26,7 +26,9 @@
         <h2>Requisição</h2>
         <div class="flex direction-row gap-sm">
             {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-printer" button_text="Imprimir" %}
-            {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-pencil" button_text="Editar" %}
+            <a href="{% url 'requisicaoEditar' requisicao.id %}">
+                {% include "components/button.html" with button_size="small" button_hierarchy="secondary" button_intent="neutral" button_icon="icon-pencil" button_text="Editar" %}
+            </a>
             <form 
                 method="POST" 
                 action="{% url 'requisicaoDeletar' requisicao.id %}"

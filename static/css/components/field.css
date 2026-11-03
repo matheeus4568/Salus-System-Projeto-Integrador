@@ -119,7 +119,8 @@
 }
 
 .file-name {
-    flex: 1;
+    display: block;
+    width: 100%;
     color: var(--mid-gray);
     white-space: nowrap;
     overflow: hidden;
