@@ -32,8 +32,14 @@
     
 </div>
 <div class="container direction-column" >
-    <h2>Tablea de pacientes</h2>
-        <hr>
+    <div class="flex direction-row justfy-content-space-between align-items-center">
+        <h2>Tablea de pacientes</h2>
+
+        <a href="{% url 'pacienteCriar' %}">
+            {% include "components/button.html" with button_size="big" button_hierarchy="primary" button_intent="neutral" button_text="Novo paciente" button_icon="icon-person-plus" %}
+        </a>
+    </div>
+
     <div>
 
         <div class="container-filter-top">

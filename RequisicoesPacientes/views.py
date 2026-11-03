@@ -47,6 +47,20 @@ def requisicaoEditar(request, requisicaoId):
         'form': form,
     })
 
+def requisicaoCriar(request):
+    if request.method == 'POST':
+        form = RequisicaoUpdateForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            form.save()
+
+            return redirect('requisicoes')
+    else:
+        form = RequisicaoUpdateForm()
+
+    return render(request, 'RequisicoesPacientes/criar_requisicao.html', {
+        'form': form,
+    })
 
 def requisicaoDeletar(request, requisicaoId):
     requisicao = get_object_or_404(Requisicao, id=requisicaoId)
@@ -101,6 +115,45 @@ def pacienteDetalhes(request, pacienteId):
     }
     return render(request, 'RequisicoesPacientes/paciente.html', context)
 
+
+def pacienteCriar(request):
+    if request.method == 'POST':
+        form = PacienteForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            paciente = form.save(commit=False)
+            from .models import Secretaria
+            paciente.secretaria = Secretaria.objects.first() 
+            
+            
+            paciente.save()
+
+            return redirect('pacientes')
+    else:
+        form = PacienteForm()
+
+    return render(request, 'RequisicoesPacientes/criar_paciente.html', {
+        'form': form,
+    })
+
+
+def pacienteEditar(request, pacienteId):
+    paciente = get_object_or_404(Paciente, id=pacienteId)
+
+    if request.method == 'POST':
+        form = PacienteForm(request.POST, request.FILES, instance=paciente)
+        
+        if form.is_valid():
+            form.save() 
+
+            return redirect('paciente', pacienteId=pacienteId)
+    else:
+        form = PacienteForm(instance=paciente)
+
+    return render(request, 'RequisicoesPacientes/editar_paciente.html', {
+        'paciente': paciente,
+        'form': form,
+    })
 
 
 def pacienteEditar(request, pacienteId):

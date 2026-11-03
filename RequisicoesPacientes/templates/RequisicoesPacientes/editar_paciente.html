@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/components/header.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/field.css' %}">
 <link rel="stylesheet" href="{% static 'css/components/button.css' %}">
-<link rel="stylesheet" href="{% static 'RequisicoesPacientes/css/editar_paciente.css' %}">
+<link rel="stylesheet" href="{% static 'RequisicoesPacientes/css/forms.css' %}">
 
 {% endblock %}
 
@@ -87,6 +87,9 @@
 
             <div class="buttons-container flex direction-row gap-md">
                 {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" properties='type="submit"' button_text='Aplicar alterações' %}
+                <a href="{% url 'paciente' paciente.id %}" class="button big secondary-neutral">
+                    Cancelar
+                </a>
             </div>
         </form>
     </div>
