@@ -3,7 +3,9 @@
 <!-- list_items: Lista de itens a serem exibidos -->
 <tbody>
     {% for item in list_items %}
-        <tr>
+        <tr
+            data-paciente="{{ item.nome|lower }}"
+        >
             <td style="width: 35%;" >{{ item.nome }}</td>
             <td style="width: 10%;">{% include 'components/especificidade_viewer.html' with paciente=item %}</td>
             <td style="width: 35%;" >{{ item.cartaoSus }}</td>

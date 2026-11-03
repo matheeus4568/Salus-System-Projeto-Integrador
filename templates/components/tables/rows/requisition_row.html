@@ -3,7 +3,11 @@
 <!-- list_items: Lista de itens a serem exibidos -->
 <tbody>
     {% for item in list_items %}
-        <tr>
+        <tr
+            data-paciente="{{ item.paciente.nome|lower }}"
+            data-status="{{ item.status|lower }}"
+            data-prioridade="{{ item.prioridade|lower }}"
+        >
             <td style="width: 20%;" >{{ item.data_recebimento|date:"d/m/Y" }}</td>
             <td style="width: 20%;">{{ item.paciente }}</td>
             <td style="width: 20%;">{{ item.procedimento }}</td>
