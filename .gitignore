@@ -223,3 +223,5 @@ __marimo__/
 # files que são guardados no db
 /comprovantes_residencia
 /documentos_requisicao
+/media/comprovantes_residencia
+/media/documentos_requisicao
