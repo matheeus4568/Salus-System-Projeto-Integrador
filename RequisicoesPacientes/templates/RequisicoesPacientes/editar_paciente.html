@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Edição de Paciente{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/field.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+<link rel="stylesheet" href="{% static 'RequisicoesPacientes/css/editar_paciente.css' %}">
+
+{% endblock %}
+
+{% block aside %}
+{% include "components/navbar.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "components/header.html" with page_title="Edição de Paciente" secratary_name="Secretaria de Teste" user_role="Administrador" user_name="Matheus Rodrigues Oliveira" %}
+{% endblock %}
+
+{% block main %}
+
+<div class="form-wrapper">
+    <div class="container direction-column">
+        <h2>Editar Paciente</h2>
+
+        <hr>
+
+        <form action="{% url 'pacienteEditar' paciente.id %}" method="POST" enctype="multipart/form-data" class="flex direction-column gap-md">
+            {% csrf_token %}
+            
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Dados pessoais</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.nome %}
+                {% include 'components/field.html' with field=form.dataNascimento %}
+                {% include 'components/field.html' with field=form.sexo %}
+                {% include 'components/field.html' with field=form.racaCor %}
+                {% include 'components/field.html' with field=form.nomeMae %}
+                {% include 'components/field.html' with field=form.municipioNascimento %}
+                {% include 'components/field.html' with field=form.observacoes %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Endereço</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.end_estado %}
+                {% include 'components/field.html' with field=form.end_municipio %}
+                {% include 'components/field.html' with field=form.end_bairro %}
+                {% include 'components/field.html' with field=form.end_rua %}
+                {% include 'components/field.html' with field=form.end_numero %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Contato</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.telefone  %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Informações clínicas</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.gestante %}
+                {% include 'components/field.html' with field=form.oncologico %}
+                {% include 'components/field.html' with field=form.alergias %}
+                {% include 'components/field.html' with field=form.deficiencias %}
+            </div>
+
+            <div class="sub-title flex direction-row gap-sm">
+                {% include 'components/icon.html' with icon_name="user" %}
+                <h3>Informações clínicas</h3>
+            </div>
+            <div class="field-group">
+                {% include 'components/field.html' with field=form.cpf  %}
+                {% include 'components/field.html' with field=form.rg  %}
+                {% include 'components/field.html' with field=form.cartaoSus  %}
+                {% include 'components/field.html' with field=form.comprovanteResidencia  %}
+            </div>
+
+            <div class="buttons-container flex direction-row gap-md">
+                {% include 'components/button.html' with button_size="big" button_hierarchy="primary" button_intent="neutral" properties='type="submit"' button_text='Aplicar alterações' %}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/components/field.js' %}"></script>
+{% endblock %}

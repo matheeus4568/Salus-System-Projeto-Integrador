@@ -1,0 +1,38 @@
+.breadcrumb-nav * {
+    color: #fff;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    color: var(--white);
+}
+
+main {
+    background-image: linear-gradient(135deg, #052B3D 0%, #0A6E66 50%, #168A62 100%);
+}
+
+.form-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: var(--spacing-lg);
+}
+
+
+.field-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.field-group .field-wrapper {
+    width: 45%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}

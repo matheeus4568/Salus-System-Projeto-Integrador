@@ -42,7 +42,6 @@ class PacienteForm(forms.ModelForm):
             'oncologico': forms.CheckboxInput(),
             
             'deficiencias': forms.Textarea(attrs={'rows': 2, 'placeholder': 'Lista de deficiências (JSON)'}),
-            'especificidades': forms.Textarea(attrs={'rows': 2, 'placeholder': 'Especificidades manuais (JSON)'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -57,6 +56,7 @@ class PacienteForm(forms.ModelForm):
         if len(cpf_numeros) != 11:
             raise forms.ValidationError("O CPF deve conter 11 dígitos numéricos.")
         return cpf
+    
 
 class BaseRequisicaoForm(forms.ModelForm):
     class Meta:

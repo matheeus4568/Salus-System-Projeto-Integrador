@@ -107,12 +107,12 @@ def pacienteEditar(request, pacienteId):
     paciente = get_object_or_404(Paciente, id=pacienteId)
 
     if request.method == 'POST':
-        form = PacienteForm(request.POST, instance=paciente)
+        form = PacienteForm(request.POST, request.FILES, instance=paciente)
         
         if form.is_valid():
             form.save() 
 
-            return redirect('paciente', id=pacienteId)
+            return redirect('paciente', pacienteId=pacienteId)
     else:
         form = PacienteForm(instance=paciente)
 
@@ -120,7 +120,7 @@ def pacienteEditar(request, pacienteId):
         'paciente': paciente,
         'form': form,
     })
-
+    
 
 def pacienteDeletar(request, pacienteId):
     paciente = get_object_or_404(Paciente, id=pacienteId)
